@@ -1,25 +1,14 @@
 fileFormatVersion: 2
-guid: 927b424107fd5864c98d7e6f34db064e
+guid: 93bbc2b79da63f2489794b4d71f9417f
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Bullet
-    100004: Player
     400000: //RootNode
-    400002: Bullet
-    400004: Player
-    2100000: Material
-    2100002: Material_001
+    2100000: Material_001
     2300000: //RootNode
-    2300002: Bullet
-    2300004: Player
     3300000: //RootNode
-    3300002: Bullet
-    3300004: Player
-    4300000: Cube
-    4300002: Bullet
-    4300004: Player
+    4300000: Bullet
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
