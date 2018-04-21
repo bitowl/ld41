@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
 {
 
     public float horizontalSpeed = 10;
+	public Transform bulletSpawnPoint;
+	public GameObject bulletPrefab;
     private Rigidbody rb;
     private float horizontalVelocity = 0;
 
@@ -20,7 +22,15 @@ public class Player : MonoBehaviour
     void Update()
     {
         horizontalVelocity = Input.GetAxis("Horizontal");
+		if (Input.GetButtonDown("Fire1")) {
+			Fire();
+		}
     }
+
+	void Fire() 
+	{
+		Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+	}
 
     void FixedUpdate()
     {
