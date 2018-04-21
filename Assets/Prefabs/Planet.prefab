@@ -20,9 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4888866783473634}
   - component: {fileID: 135986439942146424}
+  - component: {fileID: 114038429578863398}
   m_Layer: 0
   m_Name: Planet
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1649968004618404}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.58, y: 2.15, z: 0}
+  m_LocalPosition: {x: -9.33, y: 8.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4622949769638258}
@@ -132,6 +133,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114038429578863398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1649968004618404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f7f201b769ec444f8249a84fc10cce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135986439942146424
 SphereCollider:
   m_ObjectHideFlags: 1
