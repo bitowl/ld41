@@ -3,35 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SendPanel : MonoBehaviour {
-	private Canvas canvas;
-	public RectTransform panelToDisplay;
+	public RectTransform innerPanel;
+	public RectTransform panel;
 	public FleetManager fleetManager;
 	public PlanetSelector planetSelector;
 
+	public Canvas canvas;
+	private ShowPanelEventData data;
+	private Camera mainCamera;
+
 	void Start()
 	{
-		canvas = GetComponent<Canvas>();
-		canvas.enabled = false;
-	}
-
-	public void Show(Vector3 worldPosition) {
-		// TODO: refactor
-		Vector3 screenPosition = Camera.main.WorldToScreenPoint(worldPosition);
-		Vector3 canvasPosition = RectTransformUtility.PixelAdjustPoint(new Vector2(screenPosition.x, screenPosition.y), panelToDisplay, canvas);
-		panelToDisplay.position = canvasPosition;
-		canvas.enabled = true;
+		panel.gameObject.SetActive(false);
+		mainCamera = Camera.main;
 	}
 
 	public void Show(ShowPanelEventData data) {
-
-	}
-
-	public void ShowX(EventData data) {
-		
+		this.data = data;
+		UIUtility.SetPanelToWorldCoordinates(data.position, mainCamera, canvas, innerPanel);
+		panel.gameObject.SetActive(true);
 	}
 
 	public void OnFleetClicked() {
-		fleetManager.SendFleet();
+		fleetManager.SendFleet(data.from, data.to);
 		OnDismiss();
 	}
 
@@ -40,6 +34,6 @@ public class SendPanel : MonoBehaviour {
 	}
 
 	public void OnDismiss() {
-		canvas.enabled = false;
+		panel.gameObject.SetActive(false);
 	}
 }

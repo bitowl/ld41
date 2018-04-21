@@ -8,16 +8,20 @@ public class PlanetSelector : MonoBehaviour
     public GameObject hoveredPlanetIndicator;
     public GameObject selectedPlanetIndicator;
     public FleetManager fleetManager;
-    public Vector3GameEvent showSendPanelEvent;
+    public ShowPanelEvent showSendPanelEvent;
+	public ShowFleetTooltipEvent fleetTooltipEvent;
 
     private Camera mainCamera;
     private Planet hoveredPlanet;
     private Planet selectedPlanet;
+	private Fleet hoveredFleet;
+	private ShowFleetTooltipEventData fleetTooltipEventData;
 
     // Use this for initialization
     void Start()
     {
         mainCamera = Camera.main;
+		fleetTooltipEventData = ScriptableObject.CreateInstance<ShowFleetTooltipEventData>();
     }
 
     // Update is called once per frame
@@ -47,11 +51,12 @@ public class PlanetSelector : MonoBehaviour
 
         if (Input.GetButtonUp("Fire1") && selectedPlanet != null && hoveredPlanet != null && selectedPlanet != hoveredPlanet)
         {
+			ShowPanelEventData data = ScriptableObject.CreateInstance<ShowPanelEventData>();
+			data.position = hoveredPlanet.transform.position;
+			data.from = selectedPlanet;
+			data.to = hoveredPlanet;
 
-			fleetManager.PrepareFleet(selectedPlanet, hoveredPlanet);
-
-            showSendPanelEvent.Raise(hoveredPlanet.transform.position);
-            // fleetManager.SendFleet(selectedPlanet, hoveredPlanet);
+            showSendPanelEvent.Raise(data);
         }
 
         hoveredPlanetIndicator.SetActive(hoveredPlanet != null);
@@ -73,10 +78,37 @@ public class PlanetSelector : MonoBehaviour
             {
                 hoveredPlanet = null;
             }
+
+			if (hit.transform.gameObject.tag == "Fleet") 
+			{
+				Fleet newHoveredFleet = hit.transform.GetComponent<Fleet>();
+				if (hoveredFleet == null || hoveredFleet != newHoveredFleet) {
+					hoveredFleet = newHoveredFleet;
+					fleetTooltipEventData.hoveringFleet = true;
+					fleetTooltipEventData.fleet = hoveredFleet;
+					fleetTooltipEvent.Raise(fleetTooltipEventData);
+					Debug.Log("show"+fleetTooltipEventData);
+				}
+			}
+			else
+			{
+				if (hoveredFleet != null) {
+					fleetTooltipEventData.hoveringFleet = false;
+					fleetTooltipEvent.Raise(fleetTooltipEventData);
+					Debug.Log("hide" +fleetTooltipEventData);
+				}
+				hoveredFleet = null;
+			}
         }
         else
         {
             hoveredPlanet = null;
+			if (hoveredFleet != null) {
+				fleetTooltipEventData.hoveringFleet = false;
+				fleetTooltipEvent.Raise(fleetTooltipEventData);
+				Debug.Log("hide" +fleetTooltipEventData);
+			}
+			hoveredFleet = null;
         }
     }
 

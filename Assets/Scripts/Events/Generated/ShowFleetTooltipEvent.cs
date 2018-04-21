@@ -2,16 +2,16 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-[CreateAssetMenu(menuName = "Custom/EventDataGameEvent")]
-public class EventDataGameEvent : ScriptableObject
+[CreateAssetMenu(menuName = "Events/ShowFleetTooltipEvent")]
+public class ShowFleetTooltipEvent : ScriptableObject
 {
     /// <summary>
     /// The list of listeners that this event will notify if it is raised.
     /// </summary>
-    private readonly List<EventDataGameEventListener> eventListeners =
-        new List<EventDataGameEventListener>();
+    private readonly List<ShowFleetTooltipEventListener> eventListeners =
+        new List<ShowFleetTooltipEventListener>();
 
-    public void Raise(EventData value)
+    public void Raise(ShowFleetTooltipEventData value)
     {
         for (int i = eventListeners.Count - 1; i >= 0; i--)
         {
@@ -19,7 +19,7 @@ public class EventDataGameEvent : ScriptableObject
         }
     }
 
-    public void RegisterListener(EventDataGameEventListener listener)
+    public void RegisterListener(ShowFleetTooltipEventListener listener)
     {
         if (!eventListeners.Contains(listener))
         {
@@ -27,7 +27,7 @@ public class EventDataGameEvent : ScriptableObject
         }
     }
 
-    public void UnregisterListener(EventDataGameEventListener listener)
+    public void UnregisterListener(ShowFleetTooltipEventListener listener)
     {
         if (eventListeners.Contains(listener))
         {
