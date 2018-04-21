@@ -10,22 +10,32 @@ public class Enemy : MonoBehaviour
     public GameEvent playerDamageEvent;
     public FloatGameEvent enemyDestroyedEvent;
     public float cashWhenKilled = 2;
+    public float startHealth = 3;
 
     private Rigidbody rb;
+    private float health;
     // Use this for initialization
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.velocity = Vector3.down * verticalSpeed;
         Destroy(gameObject, maxLifeTime);
+        health = startHealth;
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player") {
             playerDamageEvent.Raise();
+            Kill();
+        } else if (other.gameObject.tag == "Bullet") {
+            health--;
+            if (health <= 0) {
+                Kill();
+            }
+        } else {
+            Debug.LogWarning("Enemy collided with unknown " + other.gameObject);
         }
-        Kill();
     }
 
     void Kill() {

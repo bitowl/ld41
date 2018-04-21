@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
         rb.velocity = Vector3.right * horizontalVelocity * horizontalSpeed;
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
     }
 
