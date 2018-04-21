@@ -8,7 +8,8 @@ public class Enemy : MonoBehaviour
     public float verticalSpeed = 10;
     public float maxLifeTime = 5;
     public GameEvent playerDamageEvent;
-    public GameEvent enemyDestroyedEvent;
+    public FloatGameEvent enemyDestroyedEvent;
+    public float cashWhenKilled = 2;
 
     private Rigidbody rb;
     // Use this for initialization
@@ -28,7 +29,7 @@ public class Enemy : MonoBehaviour
     }
 
     void Kill() {
-        enemyDestroyedEvent.Raise();
+        enemyDestroyedEvent.Raise(cashWhenKilled);
         Destroy(gameObject);
     }
 }

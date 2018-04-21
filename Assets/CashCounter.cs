@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class CashCounter : MonoBehaviour {
 	public FloatVariable cash;
-	public void OnEnemyDestroyed() {
-		cash.value++;
+
+	void Start()
+	{
+		cash.value = 0;
+	}
+	
+	public void AddCash(float value) {
+		cash.value += value;
 	}
 }
