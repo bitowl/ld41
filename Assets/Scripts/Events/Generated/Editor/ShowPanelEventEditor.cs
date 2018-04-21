@@ -14,13 +14,9 @@ public class ShowPanelEventEditor : Editor
             eventData = ScriptableObject.CreateInstance<ShowPanelEventData>();
         }
 
-        // GUI.enabled = Application.isPlaying;
+        GUI.enabled = Application.isPlaying;
 
-        Editor myEditor = Editor.CreateEditor(eventData);
-        myEditor.OnInspectorGUI();
-
-        // EditorGUILayout.ObjectField(eventData, typeof(ShowPanelEventData), false);
-        //EditorGUILayout.ObjectField(eventData, typeof(ShowPanelEventData));
+        Editor.CreateEditor(eventData).OnInspectorGUI();
 
         ShowPanelEvent e = target as ShowPanelEvent;
         if (GUILayout.Button("Raise"))

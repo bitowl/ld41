@@ -55,7 +55,7 @@ public class " +eventName+ @"EventListener : MonoBehaviour
 
     [Tooltip(""Response to invoke when Event is raised."")]
     [SerializeField]
-    public EventDataUnityEvent Response;
+    public " +eventName+ @"UnityEvent Response;
 
     private void OnEnable()
     {
@@ -78,31 +78,44 @@ using UnityEngine;
 [CustomEditor(typeof(" +eventName+ @"Event))]
 public class " +eventName+ @"EventEditor : Editor
 {
+    private " +eventName+ @"EventData eventData;
+
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
 
+        if (eventData == null) {
+            eventData = ScriptableObject.CreateInstance<" +eventName+ @"EventData>();
+        }
+
         GUI.enabled = Application.isPlaying;
+
+        Editor.CreateEditor(eventData).OnInspectorGUI();
 
         " +eventName+ @"Event e = target as " +eventName+ @"Event;
         if (GUILayout.Button(""Raise""))
         {
-            e.Raise();
+            e.Raise(eventData);
         }
     }
 }";
         string eventDataCsTemplate = @"using UnityEngine;
 
 [System.Serializable]
-public class " +eventName+ @"EventData {
-    Vector3 position;
-    Planet from;
-    Planet to;
+public class " +eventName+ @"EventData : ScriptableObject {
+
+}";
+        string unityEventCsTemplate = @"using UnityEngine.Events;
+
+[System.Serializable]
+public class " +eventName+ @"UnityEvent : UnityEvent<" +eventName+ @"EventData> {
+
 }";
 
         WriteFile("Assets/Scripts/Events/Generated/" + eventName + "Event.cs", eventCsTemplate);
         WriteFile("Assets/Scripts/Events/Generated/" + eventName + "EventListener.cs", eventListenerCsTemplate);
-        WriteFile("Assets/Scripts/Events/Generated/Editor" + eventName + "EventEditor.cs", eventEditorCsTemplate);
+        WriteFile("Assets/Scripts/Events/Generated/Editor/" + eventName + "EventEditor.cs", eventEditorCsTemplate);
+        WriteFile("Assets/Scripts/Events/Generated/" + eventName + "UnityEvent.cs", unityEventCsTemplate);
         WriteFile("Assets/Scripts/Events/" + eventName + "EventData.cs", eventDataCsTemplate);
     }
 

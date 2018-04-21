@@ -8,7 +8,7 @@ public class ShowPanelEventListener : MonoBehaviour
 
     [Tooltip("Response to invoke when Event is raised.")]
     [SerializeField]
-    public EventDataUnityEvent Response;
+    public ShowPanelUnityEvent Response;
 
     private void OnEnable()
     {
@@ -22,6 +22,6 @@ public class ShowPanelEventListener : MonoBehaviour
 
     public void OnEventRaised(ShowPanelEventData value)
     {
-        // Response.Invoke(value);
+        Response.Invoke(value);
     }
 }
