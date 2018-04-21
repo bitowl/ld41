@@ -22,6 +22,14 @@ public class SendPanel : MonoBehaviour {
 		canvas.enabled = true;
 	}
 
+	public void Show(ShowPanelEventData data) {
+
+	}
+
+	public void ShowX(EventData data) {
+		
+	}
+
 	public void OnFleetClicked() {
 		fleetManager.SendFleet();
 		OnDismiss();
