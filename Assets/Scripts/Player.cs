@@ -7,8 +7,12 @@ public class Player : MonoBehaviour
 {
 
     public float horizontalSpeed = 10;
-	public Transform bulletSpawnPoint;
-	public GameObject bulletPrefab;
+    public Transform bulletSpawnPoint;
+    public GameObject bulletPrefab;
+    public FloatVariable maxHealth;
+    public FloatVariable health;
+
+
     private Rigidbody rb;
     private float horizontalVelocity = 0;
 
@@ -16,21 +20,23 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        health.value = maxHealth.value;
     }
 
     // Update is called once per frame
     void Update()
     {
         horizontalVelocity = Input.GetAxis("Horizontal");
-		if (Input.GetButtonDown("Fire1")) {
-			Fire();
-		}
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Fire();
+        }
     }
 
-	void Fire() 
-	{
-		Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-	}
+    void Fire()
+    {
+        Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+    }
 
     void FixedUpdate()
     {
@@ -39,6 +45,11 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        Destroy(gameObject);
+    }
+
+    public void OnDamaged()
+    {
+        health.value -= 1;
+        Debug.Log("Health is now " + health.value);
     }
 }

@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 114247299738827618}
   - component: {fileID: 65411344728988934}
   - component: {fileID: 54746404447740928}
+  - component: {fileID: 114268745694797636}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -205,3 +206,33 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 4814861956329138}
   bulletPrefab: {fileID: 1822587152247834, guid: 698147366e46cce47a3883feb53373ad,
     type: 2}
+  maxHealth: {fileID: 11400000, guid: a17bd3e8998186d499ab5e41a9a7ebd3, type: 2}
+  health: {fileID: 11400000, guid: bc12f3e0603c1e940be3e23730847e68, type: 2}
+--- !u!114 &114268745694797636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1576436919151236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd12e94ca4ac6ae419568e06ecef910a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 0f972e94eb86bfb4d83741283ba106f3, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114247299738827618}
+        m_MethodName: OnDamaged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

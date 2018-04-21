@@ -174,3 +174,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   verticalSpeed: 10
   maxLifeTime: 5
+  playerDamageEvent: {fileID: 11400000, guid: 0f972e94eb86bfb4d83741283ba106f3, type: 2}
