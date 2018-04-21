@@ -31,6 +31,7 @@ public class Enemy : MonoBehaviour
         } else if (other.gameObject.tag == "Bullet") {
             health--;
             if (health <= 0) {
+                enemyDestroyedEvent.Raise(cashWhenKilled);
                 Kill();
             }
         } else {
@@ -39,7 +40,6 @@ public class Enemy : MonoBehaviour
     }
 
     void Kill() {
-        enemyDestroyedEvent.Raise(cashWhenKilled);
         Destroy(gameObject);
     }
 }

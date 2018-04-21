@@ -11,40 +11,54 @@ public class Player : MonoBehaviour
     public GameObject bulletPrefab;
     public FloatVariable maxHealth;
     public FloatVariable health;
-	public FloatVariable maxAmmo;
-	public FloatVariable ammo;
+    public FloatVariable maxAmmo;
+    public FloatVariable ammo;
+    public float fireCooldown = 0.1f;
 
 
     private Rigidbody rb;
     private float horizontalVelocity = 0;
+    private float fireCooldownLeft = 0;
 
     // Use this for initialization
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         health.value = maxHealth.value;
-		ammo.value = maxAmmo.value;
+        ammo.value = maxAmmo.value;
     }
 
     // Update is called once per frame
     void Update()
     {
         horizontalVelocity = Input.GetAxis("Horizontal");
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("Fire1"))
         {
-            Fire();
+            fireCooldownLeft -= Time.deltaTime;
+            if (fireCooldownLeft <= 0)
+            {
+                Fire();
+                fireCooldownLeft = fireCooldown;
+            }
+        }
+        else
+        {
+            fireCooldownLeft = 0;
         }
     }
 
     void Fire()
     {
-		if (ammo.value > 0) {
-			Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-			ammo.value--;
-		} else {
-			Debug.LogWarning("Not enough ammo!");
-		}
-        
+        if (ammo.value > 0)
+        {
+            Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+            ammo.value--;
+        }
+        else
+        {
+            Debug.LogWarning("Not enough ammo!");
+        }
+
     }
 
     void FixedUpdate()
