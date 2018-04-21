@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114877207327509170}
   - component: {fileID: 114360614691805982}
   m_Layer: 5
-  m_Name: CashText
+  m_Name: AmmoText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,9 +40,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c440153f99febb6498039ad04f58209d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  variable: {fileID: 11400000, guid: 0e6d5625417f02540b4b07bb89b72270, type: 2}
+  variable: {fileID: 11400000, guid: 3e9cdaa4db556eb4285c80f0dbe8f5a8, type: 2}
   text: {fileID: 114877207327509170}
-  prefix: 'Cash: $'
+  prefix: 'Ammo: '
 --- !u!114 &114877207327509170
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,13 +69,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
-    m_Alignment: 2
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Cash: $0'
+  m_Text: 'Ammo: $0'
 --- !u!222 &222914927116830678
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -95,8 +95,8 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -30, y: -20}
-  m_SizeDelta: {x: 356.97, y: 96.3}
-  m_Pivot: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 30, y: -20}
+  m_SizeDelta: {x: 356.97, y: 36.4}
+  m_Pivot: {x: 0, y: 1}

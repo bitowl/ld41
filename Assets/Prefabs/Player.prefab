@@ -208,6 +208,8 @@ MonoBehaviour:
     type: 2}
   maxHealth: {fileID: 11400000, guid: a17bd3e8998186d499ab5e41a9a7ebd3, type: 2}
   health: {fileID: 11400000, guid: bc12f3e0603c1e940be3e23730847e68, type: 2}
+  maxAmmo: {fileID: 11400000, guid: e17c6d3c3c607014f916894c176030c7, type: 2}
+  ammo: {fileID: 11400000, guid: 3e9cdaa4db556eb4285c80f0dbe8f5a8, type: 2}
 --- !u!114 &114268745694797636
 MonoBehaviour:
   m_ObjectHideFlags: 1
