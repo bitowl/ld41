@@ -2,17 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+[RequireComponent(typeof(Rigidbody))]
+public class Player : MonoBehaviour
+{
 
-	public float HorizontalSpeed = 10;
+    public float horizontalSpeed = 10;
+    private Rigidbody rb;
+    private float horizontalVelocity = 0;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		transform.position = transform.position + Vector3.right * Input.GetAxis("Horizontal") * Time.deltaTime * HorizontalSpeed;
-	}
+    // Use this for initialization
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        horizontalVelocity = Input.GetAxis("Horizontal");
+    }
+
+    void FixedUpdate()
+    {
+        rb.velocity = Vector3.right * horizontalVelocity * horizontalSpeed;
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        Destroy(gameObject);
+    }
 }
