@@ -175,3 +175,5 @@ MonoBehaviour:
   verticalSpeed: 10
   maxLifeTime: 5
   playerDamageEvent: {fileID: 11400000, guid: 0f972e94eb86bfb4d83741283ba106f3, type: 2}
+  enemyDestroyedEvent: {fileID: 11400000, guid: 61be869dc3b0416499defabbcc5ee0cb,
+    type: 2}

@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     public float verticalSpeed = 10;
     public float maxLifeTime = 5;
     public GameEvent playerDamageEvent;
+    public GameEvent enemyDestroyedEvent;
+
     private Rigidbody rb;
     // Use this for initialization
     void Start()
@@ -19,11 +21,14 @@ public class Enemy : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        Debug.Log("collision");
         if (other.gameObject.tag == "Player") {
-            Debug.Log("collision player");
             playerDamageEvent.Raise();
         }
+        Kill();
+    }
+
+    void Kill() {
+        enemyDestroyedEvent.Raise();
         Destroy(gameObject);
     }
 }
