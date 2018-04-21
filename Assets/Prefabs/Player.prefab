@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33517565246080890}
   - component: {fileID: 23470673188222316}
   - component: {fileID: 95886588237241818}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4814861956329138}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 65411344728988934}
   - component: {fileID: 54746404447740928}
   - component: {fileID: 114268745694797636}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}

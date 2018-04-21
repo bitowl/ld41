@@ -1,0 +1,26 @@
+
+Player
+- Health
+- Ammo
+
+Fleets
+- Health
+- Ammo
+- Ship Count
+
+
+
+
+
+
+General Systems:
+
+FleetManager
+- there are waves of enemies
+- calculate time and resources needed to defeat those enemies
+
+
+DialogManager
+- only one Dialog / Tooltips open at a time
+
+AudioManager
