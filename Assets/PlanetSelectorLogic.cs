@@ -13,12 +13,15 @@ public class PlanetSelectorLogic : MonoBehaviour {
 
 	void Start()
 	{
-        mainCamera = CameraUtils.GetRTSCamera();		
+        		
 		fleetTooltipEventData = ScriptableObject.CreateInstance<ShowFleetTooltipEventData>();
 	}
 
     public void OnMove(Vector3 mousePosition)
     {
+		if (mainCamera == null) {
+			mainCamera = CameraUtils.GetRTSCamera();
+		}
         CalculateHoveringPlanet(mousePosition);
 
         if (Input.GetButtonDown("Fire1"))

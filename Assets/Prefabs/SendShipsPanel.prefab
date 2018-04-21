@@ -316,10 +316,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1851272712304852}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eca76e7ca35384f419aa1f4221637424, type: 3}
+  m_Script: {fileID: 11500000, guid: 73c1eae7e1d6c9542bbcea6b1b3a7d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 0}
+  Event: {fileID: 11400000, guid: d6d4b441f8148b5409ba98545ba5194c, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -334,9 +334,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: ShowPanelUnityEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    m_TypeName: FleetDataUnityEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-    m_CallsDirty: 1
 --- !u!114 &114410282467315820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -508,7 +507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   innerPanel: {fileID: 224498074620125858}
   panel: {fileID: 224661239665726600}
-  sendFleedEvent: {fileID: 11400000, guid: d6d4b441f8148b5409ba98545ba5194c, type: 2}
+  sendFleedEvent: {fileID: 11400000, guid: 9373af8169508d645877ee6bfd987ed5, type: 2}
 --- !u!222 &222275576306119506
 CanvasRenderer:
   m_ObjectHideFlags: 1

@@ -8,7 +8,7 @@ public class TestCreateRenderTexture : MonoBehaviour {
 	public RawImage rawImage;
 	// Use this for initialization
 	void Start () {
-		RenderTexture rtsTexture = new RenderTexture(Screen.width / 2, Screen.height, 24);
+		RenderTexture rtsTexture = new RenderTexture(Screen.width, Screen.height, 24);
 		rtsCamera.targetTexture = rtsTexture;
 		rawImage.texture = rtsTexture;
 	}

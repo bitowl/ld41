@@ -204,7 +204,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltipPanel: {fileID: 224993323258324776}
-  canvas: {fileID: 0}
 --- !u!114 &114370323985936228
 MonoBehaviour:
   m_ObjectHideFlags: 1
