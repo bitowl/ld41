@@ -6,6 +6,8 @@ public class SendPanel : MonoBehaviour {
 	public RectTransform innerPanel;
 	public RectTransform panel;
 	public FleetDataEvent sendFleedEvent;
+	public FloatVariable cash;
+	public FloatVariable fleetCost;
 
 	private FleetDataEventData data;
 	private Camera mainCamera;
@@ -23,7 +25,14 @@ public class SendPanel : MonoBehaviour {
 	}
 
 	public void OnFleetClicked() {
-		sendFleedEvent.Raise(data);
+		if (cash.value >= fleetCost.value) {
+			// YEA BUY
+			cash.value -= fleetCost.value;
+			sendFleedEvent.Raise(data);
+		} else {
+			Debug.LogWarning("NOT ENOUGH MONEY");
+		}
+		
 		// fleetManager.SendFleet(data.from, data.to);
 		OnDismiss();
 	}

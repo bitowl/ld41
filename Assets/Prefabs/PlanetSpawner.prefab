@@ -45,6 +45,7 @@ MonoBehaviour:
   planetCount: 10
   planetPrefab: {fileID: 1649968004618404, guid: c3db7dd401295d94a834961ba5af5f23,
     type: 2}
+  minimumDistance: 5
 --- !u!224 &224768913676085852
 RectTransform:
   m_ObjectHideFlags: 1

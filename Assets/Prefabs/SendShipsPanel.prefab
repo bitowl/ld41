@@ -508,6 +508,8 @@ MonoBehaviour:
   innerPanel: {fileID: 224498074620125858}
   panel: {fileID: 224661239665726600}
   sendFleedEvent: {fileID: 11400000, guid: 9373af8169508d645877ee6bfd987ed5, type: 2}
+  cash: {fileID: 11400000, guid: 0e6d5625417f02540b4b07bb89b72270, type: 2}
+  fleetCost: {fileID: 11400000, guid: 3886ec8eb91a077468827ea269e24a5b, type: 2}
 --- !u!222 &222275576306119506
 CanvasRenderer:
   m_ObjectHideFlags: 1
