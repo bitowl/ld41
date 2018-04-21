@@ -17,6 +17,11 @@ public class Bullet : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+		if (other.tag == "Enemy") {
+			Destroy(gameObject);
+		} else {
+			Debug.LogWarning("Collided with unknown object" + other);
+		}
+        
     }
 }

@@ -144,6 +144,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7f201b769ec444f8249a84fc10cce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 0}
+  planetRenderer: {fileID: 23320350729504648}
+  enemyPlanetMaterial: {fileID: 2100000, guid: f10ae912dc167c3499c844d865c6521a, type: 2}
+  ownPlanetMaterial: {fileID: 0}
 --- !u!135 &135986439942146424
 SphereCollider:
   m_ObjectHideFlags: 1

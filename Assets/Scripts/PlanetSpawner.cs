@@ -12,9 +12,16 @@ public class PlanetSpawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		PlanetData initialPlanetData = ScriptableObject.CreateInstance<PlanetData>();
+		initialPlanetData.belongsToYou = true;
+		GameObject initialPlanet = Instantiate(planetPrefab);
+		initialPlanet.GetComponent<Planet>().data = initialPlanetData;
+
 		for (int i = 0; i < planetCount; i++) {
+			PlanetData planetData = ScriptableObject.CreateInstance<PlanetData>();
+			planetData.position = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0);
 			GameObject planet = Instantiate(planetPrefab);
-			planet.transform.position = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0);
+			planet.GetComponent<Planet>().data = planetData;
 		}
 	}
 	
