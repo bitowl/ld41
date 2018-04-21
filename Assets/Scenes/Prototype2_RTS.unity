@@ -1098,6 +1098,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1627604934 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1079588089293376, guid: 9d605ad063b80e6498b6d58d03ad61a6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1233839895}
+--- !u!114 &1627604935 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114972983001178044, guid: 9d605ad063b80e6498b6d58d03ad61a6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1233839895}
+  m_Script: {fileID: 11500000, guid: d8b92961c04a1ce46bb63a81e2668367, type: 3}
+--- !u!114 &1627604937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1627604934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 678ed407850252341afb24c904ec74bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: ad65f47d25dcd9c42b1052935ba189c7, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1627604935}
+        m_MethodName: OnPlanetCaptured
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: PlanetUnityEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!224 &1687542472 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224866603969040314, guid: 8f476181b000eda4884283b296b81e58,

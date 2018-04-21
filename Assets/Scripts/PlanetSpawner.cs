@@ -24,5 +24,11 @@ public class PlanetSpawner : MonoBehaviour {
 			planet.GetComponent<Planet>().data = planetData;
 		}
 	}
+
+	public void OnPlanetCaptured(PlanetEventData data) {
+		Planet planet = data.planet;
+		planet.data.belongsToYou = true;
+		planet.UpdateMaterial();
+	}
 	
 }

@@ -158,4 +158,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 0, z: 0}
   endPosition: {x: 5, y: 5, z: 0}
+  targetPlanet: {fileID: 0}
   velocity: 0.5
+  capturePlanetEvent: {fileID: 11400000, guid: ad65f47d25dcd9c42b1052935ba189c7, type: 2}

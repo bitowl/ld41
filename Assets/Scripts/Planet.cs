@@ -2,26 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Planet : MonoBehaviour {
+public class Planet : MonoBehaviour
+{
+    public PlanetData data;
+    public MeshRenderer planetRenderer;
+    public Material enemyPlanetMaterial;
+    public Material ownPlanetMaterial;
 
-	public PlanetData data;
-	public MeshRenderer planetRenderer;
-	public Material enemyPlanetMaterial;
-	public Material ownPlanetMaterial;
+    // Use this for initialization
+    void Start()
+    {
+        transform.position = data.position;
 
-	// Use this for initialization
-	void Start () {
-		transform.position = data.position;
+        UpdateMaterial();
+    }
 
-		if (data.belongsToYou) {
-			planetRenderer.material = ownPlanetMaterial;
-		} else {
-			planetRenderer.material = enemyPlanetMaterial;
-		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    public void UpdateMaterial()
+    {
+        if (data.belongsToYou)
+        {
+            planetRenderer.material = ownPlanetMaterial;
+        }
+        else
+        {
+            planetRenderer.material = enemyPlanetMaterial;
+        }
+    }
 }

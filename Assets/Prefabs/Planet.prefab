@@ -147,7 +147,7 @@ MonoBehaviour:
   data: {fileID: 0}
   planetRenderer: {fileID: 23320350729504648}
   enemyPlanetMaterial: {fileID: 2100000, guid: f10ae912dc167c3499c844d865c6521a, type: 2}
-  ownPlanetMaterial: {fileID: 0}
+  ownPlanetMaterial: {fileID: 2100002, guid: eca5401bb3db6ae4480a60455081121d, type: 3}
 --- !u!135 &135986439942146424
 SphereCollider:
   m_ObjectHideFlags: 1

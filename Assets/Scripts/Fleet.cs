@@ -5,7 +5,9 @@ using UnityEngine;
 public class Fleet : MonoBehaviour {
 	public Vector3 startPosition;
 	public Vector3 endPosition;
+	public Planet targetPlanet;
 	public float velocity = 2;
+	public PlanetEvent capturePlanetEvent;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +24,9 @@ public class Fleet : MonoBehaviour {
 	}
 
 	void ReachedGoal() {
+		PlanetEventData data = ScriptableObject.CreateInstance<PlanetEventData>();
+		data.planet = targetPlanet;
+		capturePlanetEvent.Raise(data);
 		Destroy(gameObject);
 	}
 }

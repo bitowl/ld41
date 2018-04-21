@@ -10,6 +10,7 @@ public class FleetManager : MonoBehaviour {
 		Fleet fleet = Instantiate(fleetPrefab).GetComponent<Fleet>();
 		fleet.startPosition = from.transform.position;
 		fleet.endPosition = to.transform.position;
+		fleet.targetPlanet = to;
 	}
 
 	public void SendFleet(FleetDataEventData data) {
