@@ -6,6 +6,8 @@ public class PlanetSelector : MonoBehaviour {
 	public LineRenderer arrowLine;
 	public GameObject hoveredPlanetIndicator;
 	public GameObject selectedPlanetIndicator;
+	public FleetManager fleetManager;
+
 	private Camera mainCamera;
 	private Planet hoveredPlanet;
 	private Planet selectedPlanet;
@@ -33,6 +35,10 @@ public class PlanetSelector : MonoBehaviour {
 			arrowLine.SetPosition(1, hoveredPlanet.transform.position);
 		} else {
 			arrowLine.enabled = false;
+		}
+
+		if (Input.GetButtonUp("Fire1") && selectedPlanet != null && hoveredPlanet != null) {
+			fleetManager.SendFleet(selectedPlanet, hoveredPlanet);
 		}
 
 		hoveredPlanetIndicator.SetActive(hoveredPlanet != null);
