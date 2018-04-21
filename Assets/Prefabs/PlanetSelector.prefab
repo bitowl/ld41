@@ -265,10 +265,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c22afecf6adcf624b94127db14ba5b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedPlanetData: {fileID: 11400000, guid: 0880383b0d9edd94eba482d528564ce2, type: 2}
   arrowLine: {fileID: 120236462416551624}
   hoveredPlanetIndicator: {fileID: 1437770242419534}
   selectedPlanetIndicator: {fileID: 1920525481185694}
-  fleetManager: {fileID: 0}
   showSendPanelEvent: {fileID: 11400000, guid: d6d4b441f8148b5409ba98545ba5194c, type: 2}
   fleetTooltipEvent: {fileID: 11400000, guid: bbc6f22a97c29f74c897e4f7c8b9ed77, type: 2}
 --- !u!120 &120236462416551624

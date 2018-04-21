@@ -10,16 +10,16 @@ public class PrefabSpawner : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-		SpawnPrefabs();
+        SpawnPrefabs();
     }
 
     public void SpawnPrefabs()
     {
         foreach (GameObject prefab in prefabsToSpawn)
         {
-			GameObject instantiated = Instantiate(prefab);
-			instantiated.transform.parent = transform.parent;
-            
+            GameObject instantiated = Instantiate(prefab);
+            instantiated.transform.SetParent(transform.parent, false);
+
         }
     }
 

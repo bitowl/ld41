@@ -37,8 +37,8 @@ public class MulticamSetup : MonoBehaviour
         screenWidth = Screen.width;
         screenHeight = Screen.height;
 
-        shmupCamera = GameObject.Find("ShmupCamera(Clone)").GetComponent<Camera>();
-        rtsCamera = GameObject.Find("RTSCamera(Clone)").GetComponent<Camera>();
+        shmupCamera = CameraUtils.GetShmupCamera();
+        rtsCamera = CameraUtils.GetRTSCamera();
 
         RenderTexture shmupTexture = new RenderTexture(Screen.width, Screen.height, 24);
         RenderTexture rtsTexture = new RenderTexture(Screen.width / 2, Screen.height, 24);

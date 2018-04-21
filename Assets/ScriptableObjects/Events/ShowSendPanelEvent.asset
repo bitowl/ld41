@@ -8,6 +8,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1429667690678364a85905a2f3305637, type: 3}
-  m_Name: ShowPanelEvent
+  m_Script: {fileID: 11500000, guid: b83325c42daed064da65a6744f373b81, type: 3}
+  m_Name: ShowSendPanelEvent
   m_EditorClassIdentifier: 

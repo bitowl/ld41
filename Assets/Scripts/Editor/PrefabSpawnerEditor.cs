@@ -17,7 +17,7 @@ public class PrefabSpawnerEditor : Editor
             foreach (GameObject prefab in spawner.prefabsToSpawn)
             {
                 GameObject instantiated = PrefabUtility.InstantiatePrefab(prefab) as GameObject;
-                instantiated.transform.parent = spawner.transform.parent;
+                instantiated.transform.SetParent(spawner.transform.parent, false);
                 instantiated.name += "(Clone)";
             }
             spawner.gameObject.SetActive(false);

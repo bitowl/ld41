@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eca76e7ca35384f419aa1f4221637424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: d6d4b441f8148b5409ba98545ba5194c, type: 2}
+  Event: {fileID: 0}
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -336,6 +336,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: ShowPanelUnityEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+    m_CallsDirty: 1
 --- !u!114 &114410282467315820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -507,7 +508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   innerPanel: {fileID: 224498074620125858}
   panel: {fileID: 224661239665726600}
-  sendFleedEvent: {fileID: 11400000, guid: 9373af8169508d645877ee6bfd987ed5, type: 2}
+  sendFleedEvent: {fileID: 11400000, guid: d6d4b441f8148b5409ba98545ba5194c, type: 2}
 --- !u!222 &222275576306119506
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -560,8 +561,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -346.5, y: -319}
-  m_SizeDelta: {x: -693, y: -638}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224159283023252666
 RectTransform:

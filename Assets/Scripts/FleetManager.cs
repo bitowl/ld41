@@ -11,4 +11,8 @@ public class FleetManager : MonoBehaviour {
 		fleet.startPosition = from.transform.position;
 		fleet.endPosition = to.transform.position;
 	}
+
+	public void SendFleet(FleetDataEventData data) {
+		SendFleet(data.from, data.to);
+	}
 }

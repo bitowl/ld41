@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ShowPanelEventListener : MonoBehaviour
+public class FleetDataEventListener : MonoBehaviour
 {
     [Tooltip("Event to register with.")]
-    public ShowPanelEvent Event;
+    public FleetDataEvent Event;
 
     [Tooltip("Response to invoke when Event is raised.")]
     [SerializeField]
-    public ShowPanelUnityEvent Response;
+    public FleetDataUnityEvent Response;
 
     private void OnEnable()
     {
@@ -20,7 +20,7 @@ public class ShowPanelEventListener : MonoBehaviour
         Event.UnregisterListener(this);
     }
 
-    public void OnEventRaised(ShowPanelEventData value)
+    public void OnEventRaised(FleetDataEventData value)
     {
         Response.Invoke(value);
     }

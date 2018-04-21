@@ -5,9 +5,9 @@ using UnityEngine;
 public class SendPanel : MonoBehaviour {
 	public RectTransform innerPanel;
 	public RectTransform panel;
-	public ShowPanelEvent sendFleedEvent;
+	public FleetDataEvent sendFleedEvent;
 
-	private ShowPanelEventData data;
+	private FleetDataEventData data;
 	private Camera mainCamera;
 
 	void Start()
@@ -16,7 +16,7 @@ public class SendPanel : MonoBehaviour {
 		mainCamera = Camera.main;
 	}
 
-	public void Show(ShowPanelEventData data) {
+	public void Show(FleetDataEventData data) {
 		this.data = data;
 		UIUtility.SetPanelToWorldCoordinates(data.position, mainCamera, innerPanel);
 		panel.gameObject.SetActive(true);
