@@ -26,8 +26,12 @@ public class PlanetSelectorLogic : MonoBehaviour {
 
         if (Input.GetButtonDown("Fire1"))
         {
-            selectedPlanetData.selectedPlanet = selectedPlanetData.hoveredPlanet;
-
+            if (selectedPlanetData.hoveredPlanet != null && selectedPlanetData.hoveredPlanet.data.belongsToYou) { // You should only be able to select planets that you own
+            // selecting a planet => can send fleets (no further tests there)
+                selectedPlanetData.selectedPlanet = selectedPlanetData.hoveredPlanet;
+            } else {
+                selectedPlanetData.selectedPlanet = null;
+            }
         }
 
         if (Input.GetButton("Fire1") && selectedPlanetData.selectedPlanet != null && selectedPlanetData.hoveredPlanet != null)
