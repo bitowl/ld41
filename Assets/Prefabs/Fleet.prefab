@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33169377717996942}
   - component: {fileID: 23401757182836338}
   - component: {fileID: 95133152561810902}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 4934674335212488}
   - component: {fileID: 114355170129575360}
   - component: {fileID: 65248288007589988}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Fleet
   m_TagString: Fleet
   m_Icon: {fileID: 0}

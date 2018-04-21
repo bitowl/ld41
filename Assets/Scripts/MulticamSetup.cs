@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MulticamSetup : MonoBehaviour
 {
+    [ReadOnly]
+    [Tooltip("Searches for \"ShmupCamera\" in all loaded scenes")]
     public Camera shmupCamera;
+    [ReadOnly]
+    [Tooltip("Searches for \"RTSCamera\" in all loaded scenes")]
     public Camera rtsCamera;
     public RawImage shmupImage;
     public RawImage rtsImage;
-
     private int screenWidth;
     private int screenHeight;
 
     // Use this for initialization
     void Start()
     {
-        shmupCamera = GameObject.Find("ShmupCamera").GetComponent<Camera>();
-        rtsCamera = GameObject.Find("RTSCamera").GetComponent<Camera>();
-        RemoveUnnededAudioListeners();
-        HandleResize();
     }
 
     // Update is called once per frame
@@ -33,8 +33,13 @@ public class MulticamSetup : MonoBehaviour
 
     void HandleResize()
     {
+        Debug.Log("Handle resize " + Screen.width + "/" +Screen.height);
         screenWidth = Screen.width;
         screenHeight = Screen.height;
+
+        shmupCamera = GameObject.Find("ShmupCamera(Clone)").GetComponent<Camera>();
+        rtsCamera = GameObject.Find("RTSCamera(Clone)").GetComponent<Camera>();
+
         RenderTexture shmupTexture = new RenderTexture(Screen.width, Screen.height, 24);
         RenderTexture rtsTexture = new RenderTexture(Screen.width / 2, Screen.height, 24);
         shmupCamera.targetTexture = shmupTexture;
@@ -43,9 +48,4 @@ public class MulticamSetup : MonoBehaviour
         rtsImage.texture = rtsTexture;
     }
 
-    void RemoveUnnededAudioListeners()
-    {
-        Destroy(shmupCamera.GetComponent<AudioListener>());
-        Destroy(rtsCamera.GetComponent<AudioListener>());
-    }
 }

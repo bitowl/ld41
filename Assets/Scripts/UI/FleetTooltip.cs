@@ -6,7 +6,6 @@ public class FleetTooltip : MonoBehaviour {
 
 	public RectTransform tooltipPanel;
 
-	public Canvas canvas;
 	private Camera mainCamera;
 	// Use this for initialization
 	void Start () {
@@ -22,7 +21,7 @@ public class FleetTooltip : MonoBehaviour {
 	public void OnFleetTooltipChange(ShowFleetTooltipEventData data) {
 		tooltipPanel.gameObject.SetActive(data.hoveringFleet);
 		if (data.hoveringFleet) {
-			UIUtility.SetPanelToWorldCoordinates(data.fleet.transform.position, mainCamera, canvas, tooltipPanel);
+			UIUtility.SetPanelToWorldCoordinates(data.fleet.transform.position, mainCamera, tooltipPanel);
 		}
 		// TODO: fill data 
 	}	
