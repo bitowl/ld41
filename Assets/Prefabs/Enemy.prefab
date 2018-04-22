@@ -181,3 +181,6 @@ MonoBehaviour:
     type: 2}
   cashWhenKilled: 2
   startHealth: 1
+  type: 0
+  dieExplosionParticles: {fileID: 1785951088083428, guid: 3c3bf954aaefb3442adaac94d02d8e80,
+    type: 2}

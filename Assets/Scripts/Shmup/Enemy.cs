@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     public float cashWhenKilled = 2;
     public float startHealth = 3;
     public int type = 0;
+    public GameObject dieExplosionParticles;
 
     private Rigidbody rb;
     private float health;
@@ -56,6 +57,8 @@ public class Enemy : MonoBehaviour
         EnemyEventData data = ScriptableObject.CreateInstance<EnemyEventData>();
         data.enemy = this;
         enemyDestroyedEvent.Raise(data);
+        Instantiate(dieExplosionParticles, transform.position, transform.rotation);
         Destroy(gameObject);
+        
     }
 }

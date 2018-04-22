@@ -174,3 +174,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   verticalSpeed: 40
   maxLifeTime: 5
+  dieExplosionParticles: {fileID: 1549032936221906, guid: e9f644146f8b7ae4c8350103724dc549,
+    type: 2}

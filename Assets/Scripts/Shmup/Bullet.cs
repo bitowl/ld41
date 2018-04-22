@@ -7,6 +7,8 @@ public class Bullet : MonoBehaviour
 {
     public float verticalSpeed = 10;
     public float maxLifeTime = 5;
+    public GameObject dieExplosionParticles;
+
     private Rigidbody rb;
     // Use this for initialization
     void Start()
@@ -20,6 +22,7 @@ public class Bullet : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
+            Instantiate(dieExplosionParticles, transform.position, transform.rotation);
             Destroy(gameObject);
         }
         else
