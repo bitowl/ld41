@@ -9,6 +9,8 @@ public class RTSGameManager : MonoBehaviour {
 	public List<WaveData> waveDataPresets;
 	public WaveDataListEvent roundStartEvent;
 	public GameState gameState;
+	public FloatGameEvent getCashEvent;
+	public FloatVariable cashPerPlanet;
 
 	private int wavesLeft;
 	private int waveCountThisRound;
@@ -31,7 +33,7 @@ public class RTSGameManager : MonoBehaviour {
 	}
 
 	public void OnRoundWon() {
-		playerFleet = null;
+		getCashEvent.Raise(cashPerPlanet.value);
 	}
 
 	public void OnFleetDestroyed(FleetEventData data) {
@@ -42,6 +44,9 @@ public class RTSGameManager : MonoBehaviour {
 		wavesLeft--;
 		if (playerFleet != null) {
 			playerFleet.progress = 1 - ((float)wavesLeft/waveCountThisRound);
+			if (playerFleet.progress >= 1) {
+				playerFleet = null;
+			}
 		}
 	}
 
@@ -49,6 +54,7 @@ public class RTSGameManager : MonoBehaviour {
 		int min = Mathf.FloorToInt(Mathf.Max(distance/8, 1));
 		int max = Mathf.FloorToInt(Mathf.Max(distance/4, 1));
 		waveCountThisRound = Random.Range(min, max); // TODO choose depending on difficulty
+		waveCountThisRound = 1;
 		Debug.Log("Use rounds: " + waveCountThisRound + ", " + min + "<" + max);
 		wavesLeft = waveCountThisRound;
 		WaveDataListEventData data = ScriptableObject.CreateInstance<WaveDataListEventData>();
