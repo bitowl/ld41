@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-[CreateAssetMenu(menuName = "Custom/Vector3GameEvent")]
+[CreateAssetMenu(menuName = "Events/Vector3GameEvent")]
 public class Vector3GameEvent : ScriptableObject
 {
     /// <summary>

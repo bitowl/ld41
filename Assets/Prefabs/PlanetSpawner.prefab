@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224768913676085852}
   - component: {fileID: 114972983001178044}
+  - component: {fileID: 114045844091874202}
   m_Layer: 5
   m_Name: PlanetSpawner
   m_TagString: Untagged
@@ -27,6 +28,34 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114045844091874202
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1079588089293376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 678ed407850252341afb24c904ec74bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: ad65f47d25dcd9c42b1052935ba189c7, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114972983001178044}
+        m_MethodName: OnPlanetCaptured
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: PlanetUnityEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114972983001178044
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -251,3 +251,5 @@ MonoBehaviour:
   capturePlanetEvent: {fileID: 11400000, guid: ad65f47d25dcd9c42b1052935ba189c7, type: 2}
   playerInFleet: 0
   playerInGameObjectIndicator: {fileID: 1121226833137356}
+  fleedDestroyedEvent: {fileID: 11400000, guid: a28ddd56c8a380d45aa078dfe272fd9c,
+    type: 2}

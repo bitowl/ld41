@@ -2,16 +2,16 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-[CreateAssetMenu(menuName = "Events/FloatGameEvent")]
-public class FloatGameEvent : ScriptableObject
+[CreateAssetMenu(menuName = "Events/FleetEvent")]
+public class FleetEvent : ScriptableObject
 {
     /// <summary>
     /// The list of listeners that this event will notify if it is raised.
     /// </summary>
-    private readonly List<FloatGameEventListener> eventListeners =
-        new List<FloatGameEventListener>();
+    private readonly List<FleetEventListener> eventListeners =
+        new List<FleetEventListener>();
 
-    public void Raise(float value)
+    public void Raise(FleetEventData value)
     {
         for (int i = eventListeners.Count - 1; i >= 0; i--)
         {
@@ -19,7 +19,7 @@ public class FloatGameEvent : ScriptableObject
         }
     }
 
-    public void RegisterListener(FloatGameEventListener listener)
+    public void RegisterListener(FleetEventListener listener)
     {
         if (!eventListeners.Contains(listener))
         {
@@ -27,7 +27,7 @@ public class FloatGameEvent : ScriptableObject
         }
     }
 
-    public void UnregisterListener(FloatGameEventListener listener)
+    public void UnregisterListener(FleetEventListener listener)
     {
         if (eventListeners.Contains(listener))
         {
