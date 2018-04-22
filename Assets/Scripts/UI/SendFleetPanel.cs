@@ -9,6 +9,7 @@ public class SendFleetPanel : MonoBehaviour
     public FleetDataEvent sendFleedEvent;
     public FloatVariable cash;
     public FloatVariable fleetCost;
+	public StringEvent informationBoxEvent;
 
     private FleetDataEventData data;
     private Camera mainCamera;
@@ -41,7 +42,7 @@ public class SendFleetPanel : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("NOT ENOUGH MONEY");
+			informationBoxEvent.Raise("Not enough money!");
         }
 
         // fleetManager.SendFleet(data.from, data.to);
@@ -50,6 +51,7 @@ public class SendFleetPanel : MonoBehaviour
 
     public void OnHealthClicked()
     {
+		informationBoxEvent.Raise("Not implemented :(");
         OnDismiss();
     }
 
