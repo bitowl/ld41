@@ -496,7 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b438c43b11a12d34a90aebffe15ea2c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWave: {fileID: 11400000, guid: 1d3bb204c5e47d344bc0a280f13b21ac, type: 2}
+  currentWave: {fileID: 0}
   enemyPrefabs:
   - {fileID: 1883962792261926, guid: 0fc2c7225491b7744bb6cb1d7e908dc5, type: 2}
   waveDestroyedEvent: {fileID: 11400000, guid: 18c85a3dff456ed4aba3f56b673d14c7, type: 2}
