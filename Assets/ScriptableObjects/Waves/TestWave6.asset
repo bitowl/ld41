@@ -12,33 +12,33 @@ MonoBehaviour:
   m_Name: TestWave6
   m_EditorClassIdentifier: 
   enemies:
-  - position: {x: 28.300001, y: 6.5, z: 0}
+  - position: {x: -7.1000004, y: 3.600006, z: 0}
     type: 0
-  - position: {x: 25, y: 14.4, z: 0}
+  - position: {x: -10.400002, y: 11.500006, z: 0}
     type: 0
-  - position: {x: 32.9, y: 14.8, z: 0}
+  - position: {x: -2.5, y: 11.900006, z: 0}
     type: 0
-  - position: {x: 30.6, y: 11.2, z: 0}
+  - position: {x: -4.800001, y: 8.300006, z: 0}
     type: 0
-  - position: {x: 25.8, y: 10.8, z: 0}
+  - position: {x: -9.600002, y: 7.9000063, z: 0}
     type: 0
-  - position: {x: 47.3, y: 40.1, z: 0}
+  - position: {x: 11.899998, y: 37.200005, z: 0}
     type: 0
-  - position: {x: 45.5, y: 44, z: 0}
+  - position: {x: 10.099998, y: 41.100006, z: 0}
     type: 0
-  - position: {x: 50.1, y: 43.7, z: 0}
+  - position: {x: 14.699997, y: 40.800007, z: 0}
     type: 0
-  - position: {x: 43.1, y: 48, z: 0}
+  - position: {x: 7.699997, y: 45.100006, z: 0}
     type: 0
-  - position: {x: 51.8, y: 48.1, z: 0}
+  - position: {x: 16.399998, y: 45.200005, z: 0}
     type: 0
-  - position: {x: 39.1, y: 70.7, z: 0}
+  - position: {x: 3.699997, y: 67.8, z: 0}
     type: 0
-  - position: {x: 37.4, y: 74.6, z: 0}
+  - position: {x: 2, y: 71.700005, z: 0}
     type: 0
-  - position: {x: 42.1, y: 74.7, z: 0}
+  - position: {x: 6.699997, y: 71.8, z: 0}
     type: 0
-  - position: {x: 44.8, y: 77.9, z: 0}
+  - position: {x: 9.399998, y: 75.00001, z: 0}
     type: 0
-  - position: {x: 34, y: 78.2, z: 0}
+  - position: {x: -1.4, y: 75.3, z: 0}
     type: 0

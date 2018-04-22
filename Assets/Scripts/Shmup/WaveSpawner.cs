@@ -33,6 +33,7 @@ public class WaveSpawner : MonoBehaviour
     public void OnEnemyDestroyed(EnemyEventData data)
     {
         wave.enemies.Remove(data.enemy);
+		Debug.Log("Enemy dead. Wave dead? " + wave.IsDead());
         if (wave.IsDead())
         {
             WaveEventData evt = ScriptableObject.CreateInstance<WaveEventData>();

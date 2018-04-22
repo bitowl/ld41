@@ -15,6 +15,13 @@ public class MenuManager : MonoBehaviour
     public GameObject menuPanel;
     public GameObject helpPanel;
 
+    void Start()
+    {
+        if (gameState.gameState == GameState.State.QUIT) {
+            gameState.gameState = GameState.State.MENU;
+        }
+    }
+
     void Update()
     {
         if (gameState.GetGameState() != displayedState)

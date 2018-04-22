@@ -179,4 +179,4 @@ MonoBehaviour:
   enemyDestroyedEvent: {fileID: 11400000, guid: bc4d7b5471f3bf94584e66146b896ed4,
     type: 2}
   cashWhenKilled: 2
-  startHealth: 3
+  startHealth: 1

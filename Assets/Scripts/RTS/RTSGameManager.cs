@@ -65,7 +65,6 @@ public class RTSGameManager : MonoBehaviour
         int min = Mathf.FloorToInt(Mathf.Max(distance / 8, 1));
         int max = Mathf.FloorToInt(Mathf.Max(distance / 4, 1));
         waveCountThisRound = Random.Range(min, max); // TODO choose depending on difficulty
-        waveCountThisRound = 1;
         Debug.Log("Use rounds: " + waveCountThisRound + ", " + min + "<" + max);
         wavesLeft = waveCountThisRound;
         WaveDataListEventData data = ScriptableObject.CreateInstance<WaveDataListEventData>();
@@ -81,12 +80,12 @@ public class RTSGameManager : MonoBehaviour
     public void OnGameWon()
     {
         gameState.SetGameState(GameState.State.WIN);
-        SceneManager.LoadSceneAsync("WinScene");
+        SceneManager.LoadSceneAsync("MenuScene");
     }
 
     public void OnGameLost()
     {
         gameState.SetGameState(GameState.State.LOSE);
-        SceneManager.LoadSceneAsync("WinScene");
+        SceneManager.LoadSceneAsync("MenuScene");
     }
 }
