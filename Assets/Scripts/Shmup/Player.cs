@@ -14,6 +14,9 @@ public class Player : MonoBehaviour
     public FloatVariable maxAmmo;
     public FloatVariable ammo;
     public float fireCooldown = 0.1f;
+    public float minX = -10;
+    public float maxX = 10;
+    public StringEvent informationBoxEvent;
 
 
     private Rigidbody rb;
@@ -45,6 +48,12 @@ public class Player : MonoBehaviour
         {
             fireCooldownLeft = 0;
         }
+        if (transform.localPosition.x > maxX) {
+            transform.localPosition = new Vector3(maxX, transform.localPosition.y, transform.localPosition.z);
+        }
+        if (transform.localPosition.x < minX) {
+            transform.localPosition = new Vector3(minX, transform.localPosition.y, transform.localPosition.z);
+        }
     }
 
     void Fire()
@@ -56,7 +65,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Not enough ammo!");
+            informationBoxEvent.Raise("Our ammo ran out. We need supplies!");
         }
 
     }

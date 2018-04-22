@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33005873423929010}
   - component: {fileID: 23613692914116340}
   - component: {fileID: 65499724889831296}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnemyDestroyer
   m_TagString: EnemyDestroyer
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1753233909749518}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -12.85, z: 0}
+  m_LocalPosition: {x: 0, y: -40, z: 0}
   m_LocalScale: {x: 49.67, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

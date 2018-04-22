@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlanetSpawner : MonoBehaviour
 {
-    public float minX = -10;
-    public float maxX = 10;
-    public float minY = -10;
-    public float maxY = 10;
-    public float planetCount = 10;
+    public float minX = -20;
+    public float maxX = 20;
+    public float minY = -40;
+    public float maxY = 40;
+    public float planetCount = 20;
     public GameObject planetPrefab;
     public float minimumDistance = 5;
     public GameEvent gameWonEvent;

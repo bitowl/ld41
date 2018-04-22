@@ -10,6 +10,6 @@ public class RTSDrawerToggle : MonoBehaviour {
 
 	public void Toggle() {
 		drawerVisible = !drawerVisible;
-		drawer.gameObject.SetActive(drawerVisible);
+		drawer.SetVisible(drawerVisible);
 	}
 }

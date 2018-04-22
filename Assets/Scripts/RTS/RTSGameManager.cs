@@ -19,6 +19,14 @@ public class RTSGameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+		// Handle Non-Player fleets
+		foreach(Fleet fleet in fleets) {
+			if (fleet.playerInFleet || fleet.minTravelTime == 0) {
+				continue;
+			}
+			fleet.progress += Random.Range(0, Time.deltaTime / fleet.minTravelTime);
+		}
+
 	}
 
 	public void OnRoundWon() {

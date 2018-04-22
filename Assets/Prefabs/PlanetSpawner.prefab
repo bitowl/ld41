@@ -67,11 +67,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8b92961c04a1ce46bb63a81e2668367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minX: -10
-  maxX: 10
-  minY: -10
-  maxY: 10
-  planetCount: 10
+  minX: -20
+  maxX: 20
+  minY: -20
+  maxY: 20
+  planetCount: 20
   planetPrefab: {fileID: 1649968004618404, guid: c3db7dd401295d94a834961ba5af5f23,
     type: 2}
   minimumDistance: 5

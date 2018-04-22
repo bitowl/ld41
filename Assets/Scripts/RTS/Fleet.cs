@@ -14,21 +14,23 @@ public class Fleet : MonoBehaviour
     public GameObject playerInGameObjectIndicator;
     public FleetEvent fleedDestroyedEvent;
 	public float displayedProgress;
+	[ReadOnly] public float minTravelTime;
 
     // Use this for initialization
     void Start()
     {
         transform.position = CalculateTargetPosition();
         playerInGameObjectIndicator.SetActive(playerInFleet);
+		minTravelTime = Vector3.Distance(startPosition, endPosition) / 2;
     }
 
     // Update is called once per frame
     void Update()
     {
         Vector3 targetPosition = CalculateTargetPosition();
-        transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * velocity);
+        transform.position = Vector3.Slerp(transform.position, targetPosition, Time.deltaTime * velocity);
 
-        if (progress >= 1 && Vector3.Distance(transform.position, endPosition) <= targetPlanet.radius + 0.01)
+        if (progress >= 1 && Vector3.Distance(transform.position, endPosition) <= targetPlanet.radius + 0.1)
         {
             ReachedGoal();
         }
