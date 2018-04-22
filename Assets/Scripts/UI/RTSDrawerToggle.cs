@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RTSDrawerToggle : MonoBehaviour {
-	public RTSDrawer drawer;
+public class RTSDrawerToggle : MonoBehaviour
+{
+    public RTSDrawer drawer;
 
-	private bool drawerVisible;
+    private bool drawerVisible;
 
 
-	public void Toggle() {
-		drawerVisible = !drawerVisible;
-		drawer.SetVisible(drawerVisible);
-	}
+    public void Toggle()
+    {
+        drawerVisible = !drawerVisible;
+        drawer.SetVisible(drawerVisible);
+    }
 }

@@ -78,9 +78,10 @@ public class PlanetSpawner : MonoBehaviour
 
     void TestForWinCondition()
     {
-        foreach (Planet planet in planets) 
+        foreach (Planet planet in planets)
         {
-            if (!planet.data.belongsToYou) {
+            if (!planet.data.belongsToYou)
+            {
                 return;
             }
         }

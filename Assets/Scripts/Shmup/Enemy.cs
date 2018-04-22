@@ -26,23 +26,32 @@ public class Enemy : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player") {
+        if (other.gameObject.tag == "Player")
+        {
             playerDamageEvent.Raise();
             Kill();
-        } else if (other.gameObject.tag == "Bullet") {
+        }
+        else if (other.gameObject.tag == "Bullet")
+        {
             health--;
-            if (health <= 0) {
+            if (health <= 0)
+            {
                 getCashEvent.Raise(cashWhenKilled);
                 Kill();
             }
-        } else if (other.gameObject.tag == "EnemyDestroyer") {
+        }
+        else if (other.gameObject.tag == "EnemyDestroyer")
+        {
             Kill();
-        } else {
+        }
+        else
+        {
             Debug.LogWarning("Enemy collided with unknown " + other.gameObject);
         }
     }
 
-    void Kill() {
+    void Kill()
+    {
         EnemyEventData data = ScriptableObject.CreateInstance<EnemyEventData>();
         data.enemy = this;
         enemyDestroyedEvent.Raise(data);

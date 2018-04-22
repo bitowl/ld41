@@ -51,10 +51,12 @@ public class Player : MonoBehaviour
         {
             fireCooldownLeft = 0;
         }
-        if (transform.localPosition.x > maxX) {
+        if (transform.localPosition.x > maxX)
+        {
             transform.localPosition = new Vector3(maxX, transform.localPosition.y, transform.localPosition.z);
         }
-        if (transform.localPosition.x < minX) {
+        if (transform.localPosition.x < minX)
+        {
             transform.localPosition = new Vector3(minX, transform.localPosition.y, transform.localPosition.z);
         }
     }
@@ -86,19 +88,22 @@ public class Player : MonoBehaviour
     public void OnDamaged()
     {
         health.value -= 1;
-        Debug.Log("Health is now " + health.value);
-        if (health.value < 0) {
+        if (health.value < 0)
+        {
             gameLostEvent.Raise();
         }
     }
 
-    public void OnHealthPackReceived() {
+    public void OnHealthPackReceived()
+    {
         ammo.value += healthPackAmmo.value;
-        if (ammo.value > maxAmmo.value) {
+        if (ammo.value > maxAmmo.value)
+        {
             ammo.value = maxAmmo.value;
         }
         health.value += healthPackHealth.value;
-        if (health.value > maxHealth.value) {
+        if (health.value > maxHealth.value)
+        {
             health.value = maxHealth.value;
         }
         informationBoxEvent.Raise("We got supplies!");

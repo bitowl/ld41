@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlanetSelectorLogic : MonoBehaviour {
-	public SelectedPlanetData selectedPlanetData;
+public class PlanetSelectorLogic : MonoBehaviour
+{
+    public SelectedPlanetData selectedPlanetData;
     public FleetDataEvent showSendPanelEvent;
     public ShowFleetTooltipEvent fleetTooltipEvent;
 
@@ -11,25 +12,29 @@ public class PlanetSelectorLogic : MonoBehaviour {
     private ShowFleetTooltipEventData fleetTooltipEventData;
     private Camera mainCamera;
 
-	void Start()
-	{
-        		
-		fleetTooltipEventData = ScriptableObject.CreateInstance<ShowFleetTooltipEventData>();
-	}
+    void Start()
+    {
+
+        fleetTooltipEventData = ScriptableObject.CreateInstance<ShowFleetTooltipEventData>();
+    }
 
     public void OnMove(Vector3 mousePosition)
     {
-		if (mainCamera == null) {
-			mainCamera = CameraUtils.GetRTSCamera();
-		}
+        if (mainCamera == null)
+        {
+            mainCamera = CameraUtils.GetRTSCamera();
+        }
         CalculateHoveringPlanet(mousePosition);
 
         if (Input.GetButtonDown("Click"))
         {
-            if (selectedPlanetData.hoveredPlanet != null && selectedPlanetData.hoveredPlanet.data.belongsToYou) { // You should only be able to select planets that you own
-            // selecting a planet => can send fleets (no further tests there)
+            if (selectedPlanetData.hoveredPlanet != null && selectedPlanetData.hoveredPlanet.data.belongsToYou)
+            { // You should only be able to select planets that you own
+              // selecting a planet => can send fleets (no further tests there)
                 selectedPlanetData.selectedPlanet = selectedPlanetData.hoveredPlanet;
-            } else {
+            }
+            else
+            {
                 selectedPlanetData.selectedPlanet = null;
             }
         }
@@ -45,15 +50,16 @@ public class PlanetSelectorLogic : MonoBehaviour {
 
         if (Input.GetButtonUp("Click") && selectedPlanetData.selectedPlanet != null && selectedPlanetData.hoveredPlanet != null && selectedPlanetData.selectedPlanet != selectedPlanetData.hoveredPlanet)
         {
-			FleetDataEventData data = ScriptableObject.CreateInstance<FleetDataEventData>();
-			data.position = selectedPlanetData.hoveredPlanet.transform.position;
-			data.from = selectedPlanetData.selectedPlanet;
-			data.to = selectedPlanetData.hoveredPlanet;
+            FleetDataEventData data = ScriptableObject.CreateInstance<FleetDataEventData>();
+            data.position = selectedPlanetData.hoveredPlanet.transform.position;
+            data.from = selectedPlanetData.selectedPlanet;
+            data.to = selectedPlanetData.hoveredPlanet;
 
             showSendPanelEvent.Raise(data);
         }
 
-        if (Input.GetButtonUp("Click")) {
+        if (Input.GetButtonUp("Click"))
+        {
             selectedPlanetData.selectedPlanet = null;
         }
 
@@ -76,7 +82,7 @@ public class PlanetSelectorLogic : MonoBehaviour {
                 selectedPlanetData.hoveredPlanet = null;
             }
 
-			/*if (hit.transform.gameObject.tag == "Fleet") 
+            /*if (hit.transform.gameObject.tag == "Fleet") 
 			{
 				Fleet newHoveredFleet = hit.transform.GetComponent<Fleet>();
 				if (selectedPlanetData.hoveredFleet == null || selectedPlanetData.hoveredFleet != newHoveredFleet) {
@@ -100,12 +106,13 @@ public class PlanetSelectorLogic : MonoBehaviour {
         else
         {
             selectedPlanetData.hoveredPlanet = null;
-			if (selectedPlanetData.hoveredFleet != null) {
-				fleetTooltipEventData.hoveringFleet = false;
-				fleetTooltipEvent.Raise(fleetTooltipEventData);
-				Debug.Log("hide" +fleetTooltipEventData);
-			}
-			selectedPlanetData.hoveredFleet = null;
+            if (selectedPlanetData.hoveredFleet != null)
+            {
+                fleetTooltipEventData.hoveringFleet = false;
+                fleetTooltipEvent.Raise(fleetTooltipEventData);
+                Debug.Log("hide" + fleetTooltipEventData);
+            }
+            selectedPlanetData.hoveredFleet = null;
         }
     }
 }

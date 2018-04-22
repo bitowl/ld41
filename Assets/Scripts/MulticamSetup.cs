@@ -33,7 +33,7 @@ public class MulticamSetup : MonoBehaviour
 
     void HandleResize()
     {
-        Debug.Log("Handle resize " + Screen.width + "/" +Screen.height);
+        Debug.Log("Handle resize " + Screen.width + "/" + Screen.height);
         screenWidth = Screen.width;
         screenHeight = Screen.height;
 

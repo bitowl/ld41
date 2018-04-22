@@ -13,19 +13,19 @@ public class Fleet : MonoBehaviour
     public bool playerInFleet;
     public GameObject playerInGameObjectIndicator;
     public FleetEvent fleedDestroyedEvent;
-	public float displayedProgress;
-	[ReadOnly] public float minTravelTime;
-	public GameObject fleetRepresentation;
+    public float displayedProgress;
+    [ReadOnly] public float minTravelTime;
+    public GameObject fleetRepresentation;
 
     // Use this for initialization
     void Start()
     {
         transform.position = CalculateTargetPosition();
         playerInGameObjectIndicator.SetActive(playerInFleet);
-		minTravelTime = Vector3.Distance(startPosition, endPosition) / 2;
-		// Rotate the fleet
-		float angle = Mathf.Rad2Deg * Mathf.Atan2(-(endPosition-startPosition).x, (endPosition-startPosition).y);
-		fleetRepresentation.transform.rotation = Quaternion.Euler(0, 0, angle);//Quaternion.LookRotation(end-start, Vector3.up);
+        minTravelTime = Vector3.Distance(startPosition, endPosition) / 2;
+        // Rotate the fleet
+        float angle = Mathf.Rad2Deg * Mathf.Atan2(-(endPosition - startPosition).x, (endPosition - startPosition).y);
+        fleetRepresentation.transform.rotation = Quaternion.Euler(0, 0, angle);//Quaternion.LookRotation(end-start, Vector3.up);
     }
 
     // Update is called once per frame
@@ -54,9 +54,10 @@ public class Fleet : MonoBehaviour
 
     void ReachedGoal()
     {
-		if (playerInFleet) {
-			targetPlanet.data.playerOnPlanet = true;
-		}
+        if (playerInFleet)
+        {
+            targetPlanet.data.playerOnPlanet = true;
+        }
 
         PlanetEventData data = ScriptableObject.CreateInstance<PlanetEventData>();
         data.planet = targetPlanet;

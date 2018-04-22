@@ -18,10 +18,10 @@ public class WaveSpawner : MonoBehaviour
         wave = new Wave();
         wave.enemies = new List<Enemy>();
 
-		if (currentWave.enemies == null || currentWave.enemies.Count == 0) 
-		{
-			Debug.LogError("Wave " + currentWave.name + " does not contain any enemies!");
-		}
+        if (currentWave.enemies == null || currentWave.enemies.Count == 0)
+        {
+            Debug.LogError("Wave " + currentWave.name + " does not contain any enemies!");
+        }
         foreach (EnemyData data in currentWave.enemies)
         {
             Enemy enemy = Instantiate(enemyPrefabs[data.type], data.position, Quaternion.identity).GetComponent<Enemy>();
@@ -43,7 +43,7 @@ public class WaveSpawner : MonoBehaviour
 
     public void DoSpawnWave(WaveEventData data)
     {
-		Debug.Log("SPAWN WAVE");
+        Debug.Log("SPAWN WAVE");
         currentWave = data.wave;
         SpawnWave();
     }

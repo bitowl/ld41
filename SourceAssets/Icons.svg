@@ -15,7 +15,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="Icons.svg">
+   sodipodi:docname="Icons.svg"
+   inkscape:export-filename="C:\Users\stream\Documents\Unity\LudumDare41\Assets\Images\FleetIcon.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -26,17 +29,18 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="79.423344"
-     inkscape:cy="140.89878"
+     inkscape:cx="130.4051"
+     inkscape:cy="164.84154"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer4"
      showgrid="false"
      units="px"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="1912"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     inkscape:lockguides="true" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -56,19 +60,30 @@
      transform="translate(0,-229.26664)"
      style="display:none">
     <path
-       style="fill:#67778d;fill-opacity:1;stroke:#002056;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 41.560411,245.81785 c 0,0 14.453319,-9.57414 16.83798,-6.5481 2.384661,3.02604 -6.280833,14.96709 -6.280833,14.96709 L 31.1369,275.2175 25.524239,290.9864 6.1471992,267.46668 21.114293,264.52672 Z"
-       id="path10"
+       style="opacity:0.91000001;vector-effect:none;fill:#6b7889;fill-opacity:1;stroke:#1c2d4b;stroke-width:2.64583325;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 58.265505,235.21783 c -2.139622,-1.78219 -11.436015,2.14222 -14.493812,5.53136 l -26.393896,31.31336 -12.3098133,6.0149 20.0631323,16.74521 4.211596,-12.78747 26.078878,-31.56633 c 2.789707,-3.61652 4.983461,-13.46873 2.843915,-15.25103 z"
+       id="path5105"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="czcccccc" />
+       sodipodi:nodetypes="zccccccz" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Health">
+    <path
+       style="opacity:0.91000001;vector-effect:none;fill:#36be36;fill-opacity:1;stroke:#2a742a;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 74.208984 13.095703 L 74.208984 74.208984 L 13.095703 74.208984 L 13.095703 181.79102 L 74.208984 181.79102 L 74.208984 242.9043 L 181.79102 242.9043 L 181.79102 181.79102 L 242.9043 181.79102 L 242.9043 74.208984 L 181.79102 74.208984 L 181.79102 13.095703 L 74.208984 13.095703 z "
+       id="rect5140"
+       transform="scale(0.26458333)" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="Player">
+     inkscape:label="Player"
+     style="display:none">
     <path
-       style="opacity:1;vector-effect:none;fill:#483e37;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 13.363477,66.042274 53.988445,66.17591 33.275057,24.749133 Z"
+       style="opacity:1;vector-effect:none;fill:#c8beb7;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 13.363477,66.042274 53.988445,66.17591 33.408692,24.615498 Z"
        id="path17"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
@@ -78,6 +93,6 @@
        cy="19.002838"
        rx="16.914434"
        ry="14.741072"
-       style="fill:#483e37;stroke:none;stroke-width:0.26458332" />
+       style="fill:#c8beb7;stroke:none;stroke-width:0.26458332" />
   </g>
 </svg>
