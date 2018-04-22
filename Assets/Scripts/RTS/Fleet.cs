@@ -15,6 +15,7 @@ public class Fleet : MonoBehaviour
     public FleetEvent fleedDestroyedEvent;
 	public float displayedProgress;
 	[ReadOnly] public float minTravelTime;
+	public GameObject fleetRepresentation;
 
     // Use this for initialization
     void Start()
@@ -22,6 +23,9 @@ public class Fleet : MonoBehaviour
         transform.position = CalculateTargetPosition();
         playerInGameObjectIndicator.SetActive(playerInFleet);
 		minTravelTime = Vector3.Distance(startPosition, endPosition) / 2;
+		// Rotate the fleet
+		float angle = Mathf.Rad2Deg * Mathf.Atan2(-(endPosition-startPosition).x, (endPosition-startPosition).y);
+		fleetRepresentation.transform.rotation = Quaternion.Euler(0, 0, angle);//Quaternion.LookRotation(end-start, Vector3.up);
     }
 
     // Update is called once per frame
@@ -29,6 +33,7 @@ public class Fleet : MonoBehaviour
     {
         Vector3 targetPosition = CalculateTargetPosition();
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * velocity);
+
 
         if (progress >= 1 && Vector3.Distance(transform.position, endPosition) <= targetPlanet.radius + 0.1)
         {
