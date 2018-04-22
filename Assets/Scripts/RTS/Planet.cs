@@ -12,7 +12,7 @@ public class Planet : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        transform.position = data.position;
+        transform.localPosition = data.position;
 
         UpdateMaterial();
     }

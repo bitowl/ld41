@@ -22,6 +22,7 @@ public class PlanetSpawner : MonoBehaviour
         initialPlanetData.belongsToYou = true;
         GameObject initialPlanet = Instantiate(planetPrefab);
         initialPlanet.GetComponent<Planet>().data = initialPlanetData;
+        initialPlanet.transform.SetParent(transform, false);
         planets = new List<Planet>();
 
         for (int i = 0; i < planetCount; i++)
@@ -44,6 +45,7 @@ public class PlanetSpawner : MonoBehaviour
 
 
             Planet planet = Instantiate(planetPrefab).GetComponent<Planet>();
+            planet.transform.SetParent(transform, false);
             planet.data = planetData;
             planets.Add(planet);
         }
