@@ -175,7 +175,8 @@ MonoBehaviour:
   verticalSpeed: 10
   maxLifeTime: 5
   playerDamageEvent: {fileID: 11400000, guid: 0f972e94eb86bfb4d83741283ba106f3, type: 2}
-  enemyDestroyedEvent: {fileID: 11400000, guid: 61be869dc3b0416499defabbcc5ee0cb,
+  getCashEvent: {fileID: 11400000, guid: 61be869dc3b0416499defabbcc5ee0cb, type: 2}
+  enemyDestroyedEvent: {fileID: 11400000, guid: bc4d7b5471f3bf94584e66146b896ed4,
     type: 2}
   cashWhenKilled: 2
   startHealth: 3

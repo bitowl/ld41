@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - Planet
   - Fleet
+  - EnemyDestroyer
   layers:
   - Default
   - TransparentFX

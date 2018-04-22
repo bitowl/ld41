@@ -8,6 +8,7 @@ public class Planet : MonoBehaviour
     public MeshRenderer planetRenderer;
     public Material enemyPlanetMaterial;
     public Material ownPlanetMaterial;
+    public float radius = 2;
 
     // Use this for initialization
     void Start()

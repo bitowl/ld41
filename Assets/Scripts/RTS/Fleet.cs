@@ -6,7 +6,8 @@ public class Fleet : MonoBehaviour {
 	public Vector3 startPosition;
 	public Vector3 endPosition;
 	public Planet targetPlanet;
-	public float velocity = 2;
+	public float progress = 0.1f;
+	// public float velocity = 2;
 	public PlanetEvent capturePlanetEvent;
 
 	// Use this for initialization
@@ -16,11 +17,19 @@ public class Fleet : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = transform.position + (endPosition - startPosition).normalized * velocity * Time.deltaTime;
+		Vector3 dir = (endPosition - startPosition);
+
+		float wholeLength = dir.magnitude;
+		float lengthWithoutPlanets = dir.magnitude - targetPlanet.radius * 2; // TODO: Fix here if planets have different radius
+		float factor = (progress * lengthWithoutPlanets + targetPlanet.radius)/wholeLength;
+		transform.position = startPosition + factor * dir;
 		
-		if (Vector3.Distance(transform.position,startPosition) >= Vector3.Distance(startPosition, endPosition))  {
-			ReachedGoal();
+		if (progress >= 1) {
+
 		}
+		/*if (Vector3.Distance(transform.position,startPosition) >= Vector3.Distance(startPosition, endPosition))  {
+			ReachedGoal();
+		}*/
 	}
 
 	void ReachedGoal() {
