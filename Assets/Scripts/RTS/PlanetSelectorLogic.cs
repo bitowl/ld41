@@ -7,10 +7,16 @@ public class PlanetSelectorLogic : MonoBehaviour
     public SelectedPlanetData selectedPlanetData;
     public FleetDataEvent showSendPanelEvent;
     public ShowFleetTooltipEvent fleetTooltipEvent;
-
+    public float scrollSpeed = 0.1f;
+    public float minCameraX = -10;
+    public float minCameraY = -10;
+    public float maxCameraX = 10;
+    public float maxCameraY = 10;
 
     private ShowFleetTooltipEventData fleetTooltipEventData;
     private Camera mainCamera;
+    private Vector3 scrollOffset;
+    private Vector3 cameraPos;
 
     void Start()
     {
@@ -64,6 +70,20 @@ public class PlanetSelectorLogic : MonoBehaviour
             selectedPlanetData.selectedPlanet = null;
         }
 
+
+        // Scroll RTS pane
+        if (Input.GetButtonDown("RightClick")) {
+            scrollOffset = Input.mousePosition;
+            cameraPos = mainCamera.transform.localPosition;
+        }
+        if (Input.GetButton("RightClick")) {
+            Vector3 newPos = cameraPos + (scrollOffset - Input.mousePosition) * scrollSpeed;
+            if (newPos.x > maxCameraX) { newPos.x = maxCameraX;}
+            if (newPos.y > maxCameraY) { newPos.y = maxCameraY;}
+            if (newPos.x < minCameraX) { newPos.x = minCameraX;}
+            if (newPos.y < minCameraY) { newPos.y = minCameraY;}
+            mainCamera.transform.localPosition = newPos;
+        }
 
     }
 
