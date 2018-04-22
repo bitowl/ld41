@@ -5,6 +5,8 @@ using UnityEngine;
 public class RTSGameManager : MonoBehaviour {
 	[ReadOnly] public List<Fleet> fleets;
 	[ReadOnly] public Fleet playerFleet;
+	public List<WaveData> waveDataPresets;
+	public WaveDataListEvent roundStartEvent;
 
 	private int wavesLeft;
 	private int waveCountThisRound;
@@ -34,7 +36,14 @@ public class RTSGameManager : MonoBehaviour {
 	}
 
 	public void StartRound() {
-		waveCountThisRound = 3;
-		wavesLeft = 3;
+		waveCountThisRound = Random.Range(1, waveDataPresets.Count); // TODO choose depending on difficulty
+		wavesLeft = waveCountThisRound;
+		WaveDataListEventData data = ScriptableObject.CreateInstance<WaveDataListEventData>();
+		data.waves = new List<WaveData>();
+		for (int i = 0; i < waveCountThisRound; i++) {
+			data.waves.Add(waveDataPresets[Random.Range(0, waveDataPresets.Count)]); // TODO: don't contain the same twice?
+		}
+		roundStartEvent.Raise(data);
+		
 	}
 }

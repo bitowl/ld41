@@ -11,4 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca96431ee3197144b9b532cfb845ea3, type: 3}
   m_Name: TestWave1
   m_EditorClassIdentifier: 
-  enemies: []
+  enemies:
+  - position: {x: 0, y: 0, z: 0}
+    type: 0

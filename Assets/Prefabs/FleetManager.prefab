@@ -58,6 +58,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fleets: []
   playerFleet: {fileID: 0}
+  waveDataPresets:
+  - {fileID: 11400000, guid: 1d3bb204c5e47d344bc0a280f13b21ac, type: 2}
+  - {fileID: 11400000, guid: 47f7f7eedc549344bb407d97e62ebdd5, type: 2}
+  roundStartEvent: {fileID: 11400000, guid: 1e3891015a154794695e6cb4f5b29679, type: 2}
 --- !u!114 &114353316205951888
 MonoBehaviour:
   m_ObjectHideFlags: 1

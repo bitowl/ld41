@@ -5,11 +5,10 @@ using UnityEngine;
 public class ShmupGameManager : MonoBehaviour {
 	public WaveEvent createWaveEvent;
 	public GameEvent roundWonEvent;
-	public List<WaveData> waves;
+	[ReadOnly] public List<WaveData> waves;
 
 	// Use this for initialization
 	void Start () {
-		SpawnNextWave();
 	}
 
 	void SpawnNextWave() {
@@ -25,6 +24,11 @@ public class ShmupGameManager : MonoBehaviour {
 	}
 
 	public void OnPreviousWaveDied(WaveEventData data) {
+		SpawnNextWave();
+	}
+
+	public void OnRoundStart(WaveDataListEventData data) {
+		waves = data.waves;
 		SpawnNextWave();
 	}
 	
