@@ -54,6 +54,7 @@ public class PlanetSelectorLogic : MonoBehaviour
             data.position = selectedPlanetData.hoveredPlanet.transform.position;
             data.from = selectedPlanetData.selectedPlanet;
             data.to = selectedPlanetData.hoveredPlanet;
+            data.playerInFleet = data.from.data.playerOnPlanet;
 
             showSendPanelEvent.Raise(data);
         }

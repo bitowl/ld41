@@ -5,6 +5,7 @@ using UnityEngine;
 public class RTSDrawerToggle : MonoBehaviour
 {
     public RTSDrawer drawer;
+	public GameObject arrow;
 
     private bool drawerVisible;
 
@@ -14,4 +15,16 @@ public class RTSDrawerToggle : MonoBehaviour
         drawerVisible = !drawerVisible;
         drawer.SetVisible(drawerVisible);
     }
+
+	public void OnFleetSend(FleetDataEventData data) {
+		if (data.playerInFleet) {
+			arrow.SetActive(false);
+		}
+	}
+
+	public void OnFleetDestroyed(FleetEventData data) {
+		if (data.fleet.playerInFleet) {
+			arrow.SetActive(true);
+		}
+	}
 }
