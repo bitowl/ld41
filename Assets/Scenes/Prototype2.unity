@@ -688,6 +688,29 @@ Transform:
   m_PrefabParentObject: {fileID: 4150725634543900, guid: 187e4806dfb52d1448f627e250c4d8b2,
     type: 2}
   m_PrefabInternal: {fileID: 758862121}
+--- !u!1 &372375756 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1302124874434280, guid: 78160f858ba431547a6a8d7545254210,
+    type: 2}
+  m_PrefabInternal: {fileID: 1526989077}
+--- !u!95 &372375758
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 372375756}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 191e79bb0d710b14ca63d9b37f858abc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &414811293
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,12 +1364,12 @@ Prefab:
     - target: {fileID: 224568902558519230, guid: a182373ef52bc034b834b3029243e28a,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 356.97
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 224568902558519230, guid: a182373ef52bc034b834b3029243e28a,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 36.4
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 224568902558519230, guid: a182373ef52bc034b834b3029243e28a,
         type: 2}
@@ -1381,6 +1404,16 @@ Prefab:
     - target: {fileID: 1217553381152376, guid: a182373ef52bc034b834b3029243e28a, type: 2}
       propertyPath: m_Name
       value: AmmoText(Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114498314249298904, guid: a182373ef52bc034b834b3029243e28a,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114498314249298904, guid: a182373ef52bc034b834b3029243e28a,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a182373ef52bc034b834b3029243e28a, type: 2}
@@ -1628,6 +1661,8 @@ GameObject:
   - component: {fileID: 1166867701}
   - component: {fileID: 1166867700}
   - component: {fileID: 1166867699}
+  - component: {fileID: 1166867704}
+  - component: {fileID: 1166867703}
   m_Layer: 5
   m_Name: RTSDrawerButton
   m_TagString: Untagged
@@ -1667,6 +1702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawer: {fileID: 132941459}
+  arrow: {fileID: 1699055985}
 --- !u!114 &1166867700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1752,6 +1788,62 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1166867697}
+--- !u!114 &1166867703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1166867697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea495dcc7599cb346897d4d97f52566f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: a28ddd56c8a380d45aa078dfe272fd9c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1166867699}
+        m_MethodName: OnFleetDestroyed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: FleetUnityEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &1166867704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1166867697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c1eae7e1d6c9542bbcea6b1b3a7d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 9373af8169508d645877ee6bfd987ed5, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1166867699}
+        m_MethodName: OnFleetSend
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: FleetDataUnityEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!4 &1279158208 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4356460664366602, guid: 929fad0886c666c428f2e6c6f83de115,
@@ -1913,6 +2005,20 @@ Prefab:
     - target: {fileID: 1851272712304852, guid: 78160f858ba431547a6a8d7545254210, type: 2}
       propertyPath: m_Name
       value: SendShipsPanel(Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1302124874434280, guid: 78160f858ba431547a6a8d7545254210, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224159283023252666, guid: 78160f858ba431547a6a8d7545254210,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224498074620125858, guid: 78160f858ba431547a6a8d7545254210,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 78160f858ba431547a6a8d7545254210, type: 2}
@@ -2441,12 +2547,12 @@ Prefab:
     - target: {fileID: 224568902558519230, guid: 19b9cb814296b914790d25b93203893d,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 356.97
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 224568902558519230, guid: 19b9cb814296b914790d25b93203893d,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 96.3
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 224568902558519230, guid: 19b9cb814296b914790d25b93203893d,
         type: 2}
@@ -2481,6 +2587,16 @@ Prefab:
     - target: {fileID: 1217553381152376, guid: 19b9cb814296b914790d25b93203893d, type: 2}
       propertyPath: m_Name
       value: CashText(Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114894765963130398, guid: 19b9cb814296b914790d25b93203893d,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114894765963130398, guid: 19b9cb814296b914790d25b93203893d,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19b9cb814296b914790d25b93203893d, type: 2}
@@ -2789,7 +2905,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0

@@ -63,6 +63,11 @@ MonoBehaviour:
   waveDataPresets:
   - {fileID: 11400000, guid: 1d3bb204c5e47d344bc0a280f13b21ac, type: 2}
   - {fileID: 11400000, guid: 47f7f7eedc549344bb407d97e62ebdd5, type: 2}
+  - {fileID: 11400000, guid: d4642de84fbfd7b4aae22db8dc7af79e, type: 2}
+  - {fileID: 11400000, guid: 2a5aef32389b9de439c5f9c01a995353, type: 2}
+  - {fileID: 11400000, guid: 06af2bf9d62383246a6d7063ebe10228, type: 2}
+  - {fileID: 11400000, guid: 898e0c312ca5a1d4aaf3f079213ccf95, type: 2}
+  - {fileID: 11400000, guid: d10c3640bc7dcdb439da816617186f26, type: 2}
   roundStartEvent: {fileID: 11400000, guid: 1e3891015a154794695e6cb4f5b29679, type: 2}
   gameState: {fileID: 11400000, guid: b0211bf8560a6fe43a5311a49deb21a7, type: 2}
   getCashEvent: {fileID: 11400000, guid: 61be869dc3b0416499defabbcc5ee0cb, type: 2}

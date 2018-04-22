@@ -34,5 +34,6 @@ public class WaveSpawnerEditor : Editor {
             data.position = enemy.transform.localPosition;
             wave.enemies.Add(data);
         }
+        EditorUtility.SetDirty(wave);
     }
 }

@@ -11,4 +11,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca96431ee3197144b9b532cfb845ea3, type: 3}
   m_Name: TestWave5
   m_EditorClassIdentifier: 
-  enemies: []
+  enemies:
+  - position: {x: 28.300001, y: 6.5, z: 0}
+    type: 0
+  - position: {x: 23.1, y: 7, z: 0}
+    type: 0
+  - position: {x: 35.1, y: 6.7, z: 0}
+    type: 0
+  - position: {x: 42.5, y: 6.6, z: 0}
+    type: 0
+  - position: {x: 48.6, y: 6.1, z: 0}
+    type: 0
+  - position: {x: 54.6, y: 21.6, z: 0}
+    type: 0
+  - position: {x: 45.3, y: 21.2, z: 0}
+    type: 0
+  - position: {x: 36.3, y: 21.5, z: 0}
+    type: 0
+  - position: {x: 27.8, y: 21.2, z: 0}
+    type: 0
+  - position: {x: 23, y: 35.6, z: 0}
+    type: 0
+  - position: {x: 33.3, y: 36.1, z: 0}
+    type: 0
+  - position: {x: 41.6, y: 35.7, z: 0}
+    type: 0
+  - position: {x: 51.5, y: 36.7, z: 0}
+    type: 0
+  - position: {x: 56.2, y: 50.1, z: 0}
+    type: 0
+  - position: {x: 46.1, y: 50.1, z: 0}
+    type: 0
+  - position: {x: 37.6, y: 50.2, z: 0}
+    type: 0
+  - position: {x: 28.9, y: 50.1, z: 0}
+    type: 0
