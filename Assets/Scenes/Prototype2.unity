@@ -364,6 +364,67 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: -18
       objectReference: {fileID: 0}
+    - target: {fileID: 114904569353333178, guid: 4c4937738133cdf41bca5ada1d440dea,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8e068f2028a1303478a1c07c1edb4c7e,
+        type: 3}
+    - target: {fileID: 114904569353333178, guid: 4c4937738133cdf41bca5ada1d440dea,
+        type: 2}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114904569353333178, guid: 4c4937738133cdf41bca5ada1d440dea,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114904569353333178, guid: 4c4937738133cdf41bca5ada1d440dea,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114904569353333178, guid: 4c4937738133cdf41bca5ada1d440dea,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114917888172584158, guid: 4c4937738133cdf41bca5ada1d440dea,
+        type: 2}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114882370694016678, guid: 4c4937738133cdf41bca5ada1d440dea,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114882370694016678, guid: 4c4937738133cdf41bca5ada1d440dea,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224283968229510986, guid: 4c4937738133cdf41bca5ada1d440dea,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224283968229510986, guid: 4c4937738133cdf41bca5ada1d440dea,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224782025169840662, guid: 4c4937738133cdf41bca5ada1d440dea,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224782025169840662, guid: 4c4937738133cdf41bca5ada1d440dea,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c4937738133cdf41bca5ada1d440dea, type: 2}
   m_IsPrefabParent: 0
@@ -1852,11 +1913,6 @@ Prefab:
       propertyPath: m_Name
       value: SendShipsPanel(Clone)
       objectReference: {fileID: 0}
-    - target: {fileID: 114411147137571420, guid: 78160f858ba431547a6a8d7545254210,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnFleetClicked
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 78160f858ba431547a6a8d7545254210, type: 2}
   m_IsPrefabParent: 0
@@ -1966,6 +2022,7 @@ GameObject:
   - component: {fileID: 1606042051}
   - component: {fileID: 1606042053}
   - component: {fileID: 1606042052}
+  - component: {fileID: 1606042054}
   m_Layer: 5
   m_Name: ShmupImage
   m_TagString: Untagged
@@ -2023,6 +2080,58 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1606042050}
+--- !u!114 &1606042054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1606042050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1606042052}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1166867699}
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!4 &1672602222 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4839044128268824, guid: 03c99903e2cafb54d83582cf9e963d5d,
