@@ -11,6 +11,24 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1649968004618404}
   m_IsPrefabParent: 1
+--- !u!1 &1386765040332138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4055542066826016}
+  - component: {fileID: 33526252693055508}
+  - component: {fileID: 23344750776464238}
+  - component: {fileID: 64326075376625162}
+  m_Layer: 11
+  m_Name: PlayerIndicator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1649968004618404
 GameObject:
   m_ObjectHideFlags: 0
@@ -46,6 +64,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4055542066826016
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1386765040332138}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0.7071068, w: 0}
+  m_LocalPosition: {x: 0.06, y: 2.02, z: -0.86}
+  m_LocalScale: {x: 0.2, y: 0, z: 0.2}
+  m_Children: []
+  m_Father: {fileID: 4888866783473634}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -270, y: -270, z: -90.00001}
 --- !u!4 &4622949769638258
 Transform:
   m_ObjectHideFlags: 1
@@ -57,7 +88,7 @@ Transform:
   m_LocalScale: {x: 1.473719, y: 1.473719, z: 1.473719}
   m_Children: []
   m_Father: {fileID: 4888866783473634}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4888866783473634
 Transform:
@@ -69,6 +100,7 @@ Transform:
   m_LocalPosition: {x: -9.33, y: 8.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 4055542066826016}
   - {fileID: 4622949769638258}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -108,6 +140,41 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!23 &23344750776464238
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1386765040332138}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 91ba2e529f97db34eb4430304e6c6d18, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!33 &33431269382391354
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -115,6 +182,27 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1939907733208720}
   m_Mesh: {fileID: 4300000, guid: eca5401bb3db6ae4480a60455081121d, type: 3}
+--- !u!33 &33526252693055508
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1386765040332138}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &64326075376625162
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1386765040332138}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!95 &95116435515613150
 Animator:
   serializedVersion: 3
@@ -149,6 +237,7 @@ MonoBehaviour:
   enemyPlanetMaterial: {fileID: 2100000, guid: f10ae912dc167c3499c844d865c6521a, type: 2}
   ownPlanetMaterial: {fileID: 2100002, guid: eca5401bb3db6ae4480a60455081121d, type: 3}
   radius: 2
+  playerOnPlanetIndicator: {fileID: 1386765040332138}
 --- !u!135 &135986439942146424
 SphereCollider:
   m_ObjectHideFlags: 1

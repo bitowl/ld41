@@ -9,10 +9,13 @@ public class Fleet : MonoBehaviour {
 	public float progress = 0.1f;
 	// public float velocity = 2;
 	public PlanetEvent capturePlanetEvent;
+	public bool playerInFleet;
+	public GameObject playerInGameObjectIndicator;
 
 	// Use this for initialization
 	void Start () {
 		transform.position = startPosition;
+		playerInGameObjectIndicator.SetActive(playerInFleet);
 	}
 	
 	// Update is called once per frame
@@ -25,7 +28,7 @@ public class Fleet : MonoBehaviour {
 		transform.position = startPosition + factor * dir;
 		
 		if (progress >= 1) {
-
+			ReachedGoal();
 		}
 		/*if (Vector3.Distance(transform.position,startPosition) >= Vector3.Distance(startPosition, endPosition))  {
 			ReachedGoal();

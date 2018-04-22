@@ -20,6 +20,7 @@ public class PlanetSpawner : MonoBehaviour
     {
         PlanetData initialPlanetData = ScriptableObject.CreateInstance<PlanetData>();
         initialPlanetData.belongsToYou = true;
+        initialPlanetData.playerOnPlanet = true;
         GameObject initialPlanet = Instantiate(planetPrefab);
         initialPlanet.GetComponent<Planet>().data = initialPlanetData;
         initialPlanet.transform.SetParent(transform, false);

@@ -9,6 +9,7 @@ public class Planet : MonoBehaviour
     public Material enemyPlanetMaterial;
     public Material ownPlanetMaterial;
     public float radius = 2;
+    public GameObject playerOnPlanetIndicator;
 
     // Use this for initialization
     void Start()
@@ -34,5 +35,6 @@ public class Planet : MonoBehaviour
         {
             planetRenderer.material = enemyPlanetMaterial;
         }
+        playerOnPlanetIndicator.SetActive(data.playerOnPlanet);
     }
 }
