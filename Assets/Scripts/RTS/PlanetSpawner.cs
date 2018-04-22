@@ -11,6 +11,7 @@ public class PlanetSpawner : MonoBehaviour
     public float planetCount = 10;
     public GameObject planetPrefab;
     public float minimumDistance = 5;
+    public GameEvent gameWonEvent;
 
     private int maximumTriesPerPlanet = 100;
     private List<Planet> planets;
@@ -21,10 +22,11 @@ public class PlanetSpawner : MonoBehaviour
         PlanetData initialPlanetData = ScriptableObject.CreateInstance<PlanetData>();
         initialPlanetData.belongsToYou = true;
         initialPlanetData.playerOnPlanet = true;
-        GameObject initialPlanet = Instantiate(planetPrefab);
-        initialPlanet.GetComponent<Planet>().data = initialPlanetData;
+        Planet initialPlanet = Instantiate(planetPrefab).GetComponent<Planet>();
+        initialPlanet.data = initialPlanetData;
         initialPlanet.transform.SetParent(transform, false);
         planets = new List<Planet>();
+        planets.Add(initialPlanet);
 
         for (int i = 0; i < planetCount; i++)
         {
@@ -69,6 +71,20 @@ public class PlanetSpawner : MonoBehaviour
         Planet planet = data.planet;
         planet.data.belongsToYou = true;
         planet.UpdateMaterial();
+        TestForWinCondition();
+    }
+
+    void TestForWinCondition()
+    {
+        foreach (Planet planet in planets) 
+        {
+            if (!planet.data.belongsToYou) {
+                return;
+            }
+        }
+
+        // WE CONQUERED THE UNIVERSE
+        gameWonEvent.Raise();
     }
 
 }

@@ -24,7 +24,7 @@ public class PlanetSelectorLogic : MonoBehaviour {
 		}
         CalculateHoveringPlanet(mousePosition);
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Click"))
         {
             if (selectedPlanetData.hoveredPlanet != null && selectedPlanetData.hoveredPlanet.data.belongsToYou) { // You should only be able to select planets that you own
             // selecting a planet => can send fleets (no further tests there)
@@ -34,7 +34,7 @@ public class PlanetSelectorLogic : MonoBehaviour {
             }
         }
 
-        if (Input.GetButton("Fire1") && selectedPlanetData.selectedPlanet != null && selectedPlanetData.hoveredPlanet != null)
+        if (Input.GetButton("Click") && selectedPlanetData.selectedPlanet != null && selectedPlanetData.hoveredPlanet != null)
         {
             selectedPlanetData.isArrowShown = true;
         }
@@ -43,7 +43,7 @@ public class PlanetSelectorLogic : MonoBehaviour {
             selectedPlanetData.isArrowShown = false;
         }
 
-        if (Input.GetButtonUp("Fire1") && selectedPlanetData.selectedPlanet != null && selectedPlanetData.hoveredPlanet != null && selectedPlanetData.selectedPlanet != selectedPlanetData.hoveredPlanet)
+        if (Input.GetButtonUp("Click") && selectedPlanetData.selectedPlanet != null && selectedPlanetData.hoveredPlanet != null && selectedPlanetData.selectedPlanet != selectedPlanetData.hoveredPlanet)
         {
 			FleetDataEventData data = ScriptableObject.CreateInstance<FleetDataEventData>();
 			data.position = selectedPlanetData.hoveredPlanet.transform.position;
@@ -51,6 +51,10 @@ public class PlanetSelectorLogic : MonoBehaviour {
 			data.to = selectedPlanetData.hoveredPlanet;
 
             showSendPanelEvent.Raise(data);
+        }
+
+        if (Input.GetButtonUp("Click")) {
+            selectedPlanetData.selectedPlanet = null;
         }
 
 

@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114867108274970630}
   - component: {fileID: 114793722107722892}
   - component: {fileID: 114353316205951888}
+  - component: {fileID: 114920171050339068}
   m_Layer: 0
   m_Name: FleetManager
   m_TagString: Untagged
@@ -176,6 +177,34 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114008822467181190}
         m_MethodName: OnRoundWon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114920171050339068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1621009729312042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd12e94ca4ac6ae419568e06ecef910a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 109b2dcea91339e45a57d5c1192a7130, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114008822467181190}
+        m_MethodName: OnGameWon
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

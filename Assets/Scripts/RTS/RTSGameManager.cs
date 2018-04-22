@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RTSGameManager : MonoBehaviour {
 	[ReadOnly] public List<Fleet> fleets;
@@ -45,5 +46,9 @@ public class RTSGameManager : MonoBehaviour {
 		}
 		roundStartEvent.Raise(data);
 		
+	}
+
+	public void OnGameWon() {
+		SceneManager.LoadSceneAsync("WinScene");
 	}
 }
