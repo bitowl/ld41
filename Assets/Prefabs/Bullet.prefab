@@ -176,3 +176,4 @@ MonoBehaviour:
   maxLifeTime: 5
   dieExplosionParticles: {fileID: 1549032936221906, guid: e9f644146f8b7ae4c8350103724dc549,
     type: 2}
+  audioEvent: {fileID: 11400000, guid: f3e3c1d74ffaa7c4f820889aac068c0b, type: 2}

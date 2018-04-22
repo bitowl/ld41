@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public GameEvent gameLostEvent;
     public FloatVariable healthPackHealth;
     public FloatVariable healthPackAmmo;
+    public StringEvent audioEvent;
 
 
     private Rigidbody rb;
@@ -66,10 +67,12 @@ public class Player : MonoBehaviour
         if (ammo.value > 0)
         {
             Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+            audioEvent.Raise("shoot");
             ammo.value--;
         }
         else
         {
+            audioEvent.Raise("error");
             informationBoxEvent.Raise("Our ammo ran out. We need supplies!");
             fireCooldownLeft = 1;
         }

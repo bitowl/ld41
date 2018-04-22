@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class RTSDrawer : MonoBehaviour
 {
-
+	public StringEvent audioEvent;
     private Animator animator;
     // Use this for initialization
     void Start()
@@ -21,6 +21,7 @@ public class RTSDrawer : MonoBehaviour
 
     public void SetVisible(bool visible)
     {
+		audioEvent.Raise("drawer");
         animator.SetBool("DrawerOpen", visible);
     }
 }

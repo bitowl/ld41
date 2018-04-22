@@ -253,6 +253,7 @@ MonoBehaviour:
   gameLostEvent: {fileID: 11400000, guid: c5515dc3917d27540824cc9b2b0b95a8, type: 2}
   healthPackHealth: {fileID: 11400000, guid: 66d3d74ca8d927c42aae9405a0d2366a, type: 2}
   healthPackAmmo: {fileID: 11400000, guid: a2a94228d9a9bb5468845296562f67f5, type: 2}
+  audioEvent: {fileID: 11400000, guid: f3e3c1d74ffaa7c4f820889aac068c0b, type: 2}
 --- !u!114 &114268745694797636
 MonoBehaviour:
   m_ObjectHideFlags: 1

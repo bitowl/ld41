@@ -42,6 +42,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messagePrefab: {fileID: 1248133601451190, guid: 71f8880242e3f06419466bbab9838594,
     type: 2}
+  audioEvent: {fileID: 11400000, guid: f3e3c1d74ffaa7c4f820889aac068c0b, type: 2}
 --- !u!114 &114862643248758476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -105,8 +106,8 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 30}
-  m_SizeDelta: {x: 187.2, y: -30}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 187.2, y: 0}
   m_Pivot: {x: 0.5, y: 0}

@@ -185,3 +185,4 @@ MonoBehaviour:
   type: 1
   dieExplosionParticles: {fileID: 1785951088083428, guid: 2c8b97e165fdc7f4399a09651438bec4,
     type: 2}
+  audioEvent: {fileID: 11400000, guid: f3e3c1d74ffaa7c4f820889aac068c0b, type: 2}

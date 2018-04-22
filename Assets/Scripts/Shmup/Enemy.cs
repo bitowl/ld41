@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     public float startHealth = 3;
     public int type = 0;
     public GameObject dieExplosionParticles;
+    public StringEvent audioEvent;
 
     private Rigidbody rb;
     private float health;
@@ -31,6 +32,7 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             playerDamageEvent.Raise();
+            Explode();
             Kill();
         }
         else if (other.gameObject.tag == "Bullet")
@@ -39,6 +41,7 @@ public class Enemy : MonoBehaviour
             if (health <= 0)
             {
                 getCashEvent.Raise(cashWhenKilled);
+                Explode();
                 Kill();
             }
         }
@@ -57,8 +60,17 @@ public class Enemy : MonoBehaviour
         EnemyEventData data = ScriptableObject.CreateInstance<EnemyEventData>();
         data.enemy = this;
         enemyDestroyedEvent.Raise(data);
-        Instantiate(dieExplosionParticles, transform.position, transform.rotation);
+        
         Destroy(gameObject);
         
+    }
+
+    void Explode() {
+        Instantiate(dieExplosionParticles, transform.position, transform.rotation);
+        if (type == 1) {
+            audioEvent.Raise("smallExplosion");
+        } else {
+            audioEvent.Raise("bigExplosion");
+        }
     }
 }

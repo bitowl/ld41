@@ -5,6 +5,7 @@ using UnityEngine;
 public class InformationBox : MonoBehaviour
 {
     public GameObject messagePrefab;
+    public StringEvent audioEvent;
 
     // Use this for initialization
     void Start()
@@ -20,6 +21,7 @@ public class InformationBox : MonoBehaviour
 
     public void ShowInformationBox(string text)
     {
+        audioEvent.Raise("error");
         GameObject message = Instantiate(messagePrefab);
         message.GetComponent<InformationBoxMessage>().message = text;
         message.transform.SetParent(transform, false);
