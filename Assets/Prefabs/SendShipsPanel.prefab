@@ -510,8 +510,10 @@ MonoBehaviour:
   sendFleedEvent: {fileID: 11400000, guid: 9373af8169508d645877ee6bfd987ed5, type: 2}
   cash: {fileID: 11400000, guid: 0e6d5625417f02540b4b07bb89b72270, type: 2}
   fleetCost: {fileID: 11400000, guid: 3886ec8eb91a077468827ea269e24a5b, type: 2}
+  healthPackCost: {fileID: 11400000, guid: 1f5a755f54a53e04997540442dd9b814, type: 2}
   informationBoxEvent: {fileID: 11400000, guid: 6d904ecf89458774382908028f6be2b7,
     type: 2}
+  healthPackEvent: {fileID: 11400000, guid: 60ebc5938a888244ab0244936a64ceb1, type: 2}
 --- !u!222 &222275576306119506
 CanvasRenderer:
   m_ObjectHideFlags: 1

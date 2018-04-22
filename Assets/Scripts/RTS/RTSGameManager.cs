@@ -8,6 +8,7 @@ public class RTSGameManager : MonoBehaviour {
 	[ReadOnly] public Fleet playerFleet;
 	public List<WaveData> waveDataPresets;
 	public WaveDataListEvent roundStartEvent;
+	public GameState gameState;
 
 	private int wavesLeft;
 	private int waveCountThisRound;
@@ -57,6 +58,12 @@ public class RTSGameManager : MonoBehaviour {
 	}
 
 	public void OnGameWon() {
+		gameState.SetGameState(GameState.State.WIN);
+		SceneManager.LoadSceneAsync("WinScene");
+	}
+
+	public void OnGameLost() {
+		gameState.SetGameState(GameState.State.LOSE);
 		SceneManager.LoadSceneAsync("WinScene");
 	}
 }

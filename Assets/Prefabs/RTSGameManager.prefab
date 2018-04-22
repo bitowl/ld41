@@ -26,8 +26,9 @@ GameObject:
   - component: {fileID: 114793722107722892}
   - component: {fileID: 114353316205951888}
   - component: {fileID: 114920171050339068}
+  - component: {fileID: 114163961977649620}
   m_Layer: 0
-  m_Name: FleetManager
+  m_Name: RTSGameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,6 +64,35 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1d3bb204c5e47d344bc0a280f13b21ac, type: 2}
   - {fileID: 11400000, guid: 47f7f7eedc549344bb407d97e62ebdd5, type: 2}
   roundStartEvent: {fileID: 11400000, guid: 1e3891015a154794695e6cb4f5b29679, type: 2}
+  gameState: {fileID: 11400000, guid: b0211bf8560a6fe43a5311a49deb21a7, type: 2}
+--- !u!114 &114163961977649620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1621009729312042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd12e94ca4ac6ae419568e06ecef910a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: c5515dc3917d27540824cc9b2b0b95a8, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114008822467181190}
+        m_MethodName: OnGameLost
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114353316205951888
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -5,19 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/Prototype2.unity
-    guid: d54c1a6e4d5e245498907c44ff9afadd
-  - enabled: 1
-    path: Assets/Scenes/Prototype2_RTS.unity
-    guid: df3a6ec0afcb1f04194fa6ee23f44c2f
-  - enabled: 1
-    path: Assets/Scenes/Prototype2_Shmup.unity
-    guid: 04328cb2214376f458c7fb7bb8073d50
   - enabled: 1
     path: Assets/Scenes/WinScene.unity
     guid: 9b86b32e275cc554da98a3d623230e88
+  - enabled: 1
+    path: Assets/Scenes/Prototype2.unity
+    guid: d54c1a6e4d5e245498907c44ff9afadd
   m_configObjects: {}

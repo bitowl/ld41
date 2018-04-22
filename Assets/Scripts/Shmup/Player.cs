@@ -17,6 +17,9 @@ public class Player : MonoBehaviour
     public float minX = -10;
     public float maxX = 10;
     public StringEvent informationBoxEvent;
+    public GameEvent gameLostEvent;
+    public FloatVariable healthPackHealth;
+    public FloatVariable healthPackAmmo;
 
 
     private Rigidbody rb;
@@ -84,5 +87,20 @@ public class Player : MonoBehaviour
     {
         health.value -= 1;
         Debug.Log("Health is now " + health.value);
+        if (health.value < 0) {
+            gameLostEvent.Raise();
+        }
+    }
+
+    public void OnHealthPackReceived() {
+        ammo.value += healthPackAmmo.value;
+        if (ammo.value > maxAmmo.value) {
+            ammo.value = maxAmmo.value;
+        }
+        health.value += healthPackHealth.value;
+        if (health.value > maxHealth.value) {
+            health.value = maxHealth.value;
+        }
+        informationBoxEvent.Raise("We got supplies!");
     }
 }
