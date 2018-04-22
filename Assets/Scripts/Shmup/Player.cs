@@ -40,8 +40,8 @@ public class Player : MonoBehaviour
             fireCooldownLeft -= Time.deltaTime;
             if (fireCooldownLeft <= 0)
             {
-                Fire();
                 fireCooldownLeft = fireCooldown;
+                Fire();
             }
         }
         else
@@ -66,6 +66,7 @@ public class Player : MonoBehaviour
         else
         {
             informationBoxEvent.Raise("Our ammo ran out. We need supplies!");
+            fireCooldownLeft = 1;
         }
 
     }

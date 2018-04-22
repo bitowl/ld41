@@ -19,5 +19,7 @@ public class InformationBox : MonoBehaviour {
 		GameObject message = Instantiate(messagePrefab);
 		message.GetComponent<InformationBoxMessage>().message = text;
 		message.transform.SetParent(transform, false);
+		message.transform.SetAsFirstSibling();
+
 	}
 }
