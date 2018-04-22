@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     public EnemyEvent enemyDestroyedEvent;
     public float cashWhenKilled = 2;
     public float startHealth = 3;
+    public int type = 0;
 
     private Rigidbody rb;
     private float health;

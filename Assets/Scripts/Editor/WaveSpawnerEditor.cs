@@ -32,6 +32,7 @@ public class WaveSpawnerEditor : Editor {
         foreach (Enemy enemy in spawner.transform.GetComponentsInChildren<Enemy>()) {
             EnemyData data = new EnemyData();
             data.position = enemy.transform.localPosition;
+            data.type = enemy.type;
             wave.enemies.Add(data);
         }
         EditorUtility.SetDirty(wave);

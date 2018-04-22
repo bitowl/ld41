@@ -499,4 +499,5 @@ MonoBehaviour:
   currentWave: {fileID: 0}
   enemyPrefabs:
   - {fileID: 1883962792261926, guid: 0fc2c7225491b7744bb6cb1d7e908dc5, type: 2}
+  - {fileID: 1065515140954268, guid: e5eff36d311b0f64283acff4e78e58da, type: 2}
   waveDestroyedEvent: {fileID: 11400000, guid: 18c85a3dff456ed4aba3f56b673d14c7, type: 2}
