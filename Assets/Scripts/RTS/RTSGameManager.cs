@@ -39,7 +39,7 @@ public class RTSGameManager : MonoBehaviour
 
     public void OnRoundWon()
     {
-        getCashEvent.Raise(cashPerPlanet.value);
+        
     }
 
     public void OnFleetDestroyed(FleetEventData data)
@@ -55,6 +55,7 @@ public class RTSGameManager : MonoBehaviour
             playerFleet.progress = 1 - ((float)wavesLeft / waveCountThisRound);
             if (playerFleet.progress >= 1)
             {
+				getCashEvent.Raise(cashPerPlanet.value);
                 playerFleet = null;
             }
         }
