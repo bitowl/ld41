@@ -76,7 +76,7 @@ public class PlanetSelectorLogic : MonoBehaviour {
                 selectedPlanetData.hoveredPlanet = null;
             }
 
-			if (hit.transform.gameObject.tag == "Fleet") 
+			/*if (hit.transform.gameObject.tag == "Fleet") 
 			{
 				Fleet newHoveredFleet = hit.transform.GetComponent<Fleet>();
 				if (selectedPlanetData.hoveredFleet == null || selectedPlanetData.hoveredFleet != newHoveredFleet) {
@@ -95,7 +95,7 @@ public class PlanetSelectorLogic : MonoBehaviour {
 					Debug.Log("hide" +fleetTooltipEventData);
 				}
 				selectedPlanetData.hoveredFleet = null;
-			}
+			}*/
         }
         else
         {

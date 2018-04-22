@@ -49,6 +49,8 @@ public class PlanetSpawner : MonoBehaviour
 
             Planet planet = Instantiate(planetPrefab).GetComponent<Planet>();
             planet.transform.SetParent(transform, false);
+            float scale = Random.Range(0.8f, 1.2f);
+            planet.transform.localScale = new Vector3(scale, scale, scale);
             planet.data = planetData;
             planets.Add(planet);
         }

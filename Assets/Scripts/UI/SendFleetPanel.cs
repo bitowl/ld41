@@ -9,9 +9,9 @@ public class SendFleetPanel : MonoBehaviour
     public FleetDataEvent sendFleedEvent;
     public FloatVariable cash;
     public FloatVariable fleetCost;
-	public FloatVariable healthPackCost;
-	public StringEvent informationBoxEvent;
-	public GameEvent healthPackEvent;
+    public FloatVariable healthPackCost;
+    public StringEvent informationBoxEvent;
+    public GameEvent healthPackEvent;
 
     private FleetDataEventData data;
     private Camera mainCamera;
@@ -44,7 +44,7 @@ public class SendFleetPanel : MonoBehaviour
         }
         else
         {
-			informationBoxEvent.Raise("Not enough money!");
+            informationBoxEvent.Raise("Not enough money!");
         }
 
         OnDismiss();
@@ -52,7 +52,7 @@ public class SendFleetPanel : MonoBehaviour
 
     public void OnHealthClicked()
     {
-		if (cash.value >= healthPackCost.value)
+        if (cash.value >= healthPackCost.value)
         {
             // YEA BUY
             cash.value -= healthPackCost.value;
@@ -60,7 +60,7 @@ public class SendFleetPanel : MonoBehaviour
         }
         else
         {
-			informationBoxEvent.Raise("Not enough money!");
+            informationBoxEvent.Raise("Not enough money!");
         }
         OnDismiss();
     }

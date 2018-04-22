@@ -18,7 +18,7 @@ public class WaveSpawner : MonoBehaviour
         wave = new Wave();
         wave.enemies = new List<Enemy>();
 
-		if (currentWave.enemies.Count == 0) 
+		if (currentWave.enemies == null || currentWave.enemies.Count == 0) 
 		{
 			Debug.LogError("Wave " + currentWave.name + " does not contain any enemies!");
 		}

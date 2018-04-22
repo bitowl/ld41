@@ -20,7 +20,7 @@ public class FleetManager : MonoBehaviour {
 			fleet.playerInFleet = true;
 			from.UpdateMaterial();
 			gameManager.playerFleet = fleet;
-			gameManager.StartRound();
+			gameManager.StartRound(Vector3.Distance(from.data.position, to.data.position));
 
 		}
 		fleet.startPosition = from.transform.position;

@@ -45,8 +45,11 @@ public class RTSGameManager : MonoBehaviour {
 		}
 	}
 
-	public void StartRound() {
-		waveCountThisRound = Random.Range(1, waveDataPresets.Count); // TODO choose depending on difficulty
+	public void StartRound(float distance) {
+		int min = Mathf.FloorToInt(Mathf.Max(distance/8, 1));
+		int max = Mathf.FloorToInt(Mathf.Max(distance/4, 1));
+		waveCountThisRound = Random.Range(min, max); // TODO choose depending on difficulty
+		Debug.Log("Use rounds: " + waveCountThisRound + ", " + min + "<" + max);
 		wavesLeft = waveCountThisRound;
 		WaveDataListEventData data = ScriptableObject.CreateInstance<WaveDataListEventData>();
 		data.waves = new List<WaveData>();
