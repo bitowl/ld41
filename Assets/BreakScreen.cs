@@ -7,6 +7,7 @@ public class BreakScreen : MonoBehaviour {
 	private bool breakScreenVisible;
 	public GameObject contents;
 	public GameState gameState;
+	public StringEvent audioEvent;
 	// Use this for initialization
 	void Start () {
 		
@@ -21,6 +22,7 @@ public class BreakScreen : MonoBehaviour {
 	}
 
 	void UpdateState() {
+		audioEvent.Raise("drawer");
 					contents.SetActive(breakScreenVisible);
 			if (breakScreenVisible) {
 				Time.timeScale = 0;
@@ -35,6 +37,7 @@ public class BreakScreen : MonoBehaviour {
 	}
 
 	public void QuitGame() {
+		Time.timeScale = 1;
 		gameState.SetGameState(GameState.State.MENU);
         SceneManager.LoadSceneAsync("MenuScene");
 	}

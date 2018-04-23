@@ -14,6 +14,7 @@ public class MenuManager : MonoBehaviour
     public TextMeshProUGUI winLoseText;
     public GameObject menuPanel;
     public GameObject helpPanel;
+    public StringEvent audioEvent;
 
     void Start()
     {
@@ -32,6 +33,7 @@ public class MenuManager : MonoBehaviour
 
     void RenderState(GameState.State state)
     {
+        audioEvent.Raise("drawer");
         Debug.Log("SHOW STATE: " + state);
         displayedState = state;
 
