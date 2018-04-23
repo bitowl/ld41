@@ -69,6 +69,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 898e0c312ca5a1d4aaf3f079213ccf95, type: 2}
   - {fileID: 11400000, guid: d10c3640bc7dcdb439da816617186f26, type: 2}
   - {fileID: 11400000, guid: 8838f4cac6cca374c8b771e008bba492, type: 2}
+  - {fileID: 11400000, guid: 4fc0527f508b7464b9418644f432394a, type: 2}
+  - {fileID: 11400000, guid: 38889b8485796f64c9fd8f0f3e3105e2, type: 2}
+  - {fileID: 11400000, guid: 82adf1f47373caf44875e9dfc5169d5b, type: 2}
   roundStartEvent: {fileID: 11400000, guid: 1e3891015a154794695e6cb4f5b29679, type: 2}
   gameState: {fileID: 11400000, guid: b0211bf8560a6fe43a5311a49deb21a7, type: 2}
   getCashEvent: {fileID: 11400000, guid: 61be869dc3b0416499defabbcc5ee0cb, type: 2}
